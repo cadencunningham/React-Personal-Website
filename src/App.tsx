@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Layout from './Layout';
-import './app.scss';
+import './scss/main.scss';
 
 const App = () => {
     return (
