@@ -1,3 +1,16 @@
+:root {
+    --color-primary-light: #86c232;
+    --color-primary-dark: #61892f;
+
+    --color-secondary: #222629;
+    --color-grey-dary: #474b4f;
+    --color-grey-light: #6b6e70;
+
+    // --shadow-dark: 0 2rem 6rem rgba(0,0,0, .3);
+    // --shadow-light: 0 2rem 5rem rgba(0,0,0, 0.06);
+    // --line: 1px solid var(--color-grey-light-2)
+}
+
 *,
 *::before,
 *::after {
