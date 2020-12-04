@@ -3,4 +3,12 @@
     font-family: $font-primary;
     font-size: 3rem;
     background-color: var(--color-secondary);
+
+    background-image: linear-gradient(rgba($color-black, 0.4) 60%, rgba($color-white, 0.3)),
+        url(../images/light-2565575_1920.jpg);
+    background-size: cover;
+    background-position: top left;
+
+    //begining with name large in the middle with different button options at the top in light green color with no background
+    //as you scroll, have name float up and shrink until it reaches header height and that comes down with you
 }
