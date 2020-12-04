@@ -1,27 +1,72 @@
 .header {
     &-nav {
+        position: fixed;
+        width: 100vw;
+        color: $color-white;
+
+        &__button {
+            padding: 1.5rem 2rem;
+            background-color: transparent;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            cursor: pointer;
+            transition: 0.2s all;
+            color: $color-black;
+            box-shadow: none;
+            transform: translateY(0);
+
+            &:hover,
+            :active {
+                background-color: var(--color-secondary);
+                color: $color-white;
+                box-shadow: var(--shadow-light);
+            }
+
+            &:active {
+                background-color: var(--color-primary-light);
+                transform: translateY(3px);
+            }
+        }
+
         &__name {
             font-family: $font-primary;
             font-size: 8rem;
             text-transform: uppercase;
-            color: white;
-
-            @supports (-webkit-background-clip: text) or (background-clip: text) {
-                color: transparent;
-                background-image: linear-gradient(var(--color-primary-light), $color-white, var(--color-primary-light));
-                -webkit-background-clip: text;
-                background-clip: text;
-            }
+            color: inherit;
 
             position: absolute;
-            top: 75%;
+            top: 75px;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(-150%, -50%);
+            }
+
+            &::after {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(150%, -50%);
+            }
+
+            &::before,
+            &::after {
+                display: block;
+                content: '';
+                height: 10px;
+                width: 60px;
+                background-color: $color-white;
+            }
         }
     }
 
     &__background-img {
-        background-image: linear-gradient(rgba($color-black, 0.4) 60%, rgba($color-white, 0.3)),
+        background-image: radial-gradient(rgba($color-white, 0.2) 65%, var(--color-primary-light)),
             url(../images/light-2565575_1920.jpg);
         background-size: cover;
         background-position: top left;
