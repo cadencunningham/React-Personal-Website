@@ -7,10 +7,10 @@ interface IProps {
 const Layout = (props: IProps) => {
     const { children } = props;
     return (
-        <div>
+        <div className="content-container">
             <div className="header">HEADER</div>
             {children}
-            <div>FOOTER</div>
+            <div className="footer">FOOTER</div>
         </div>
     );
 };

@@ -1,12 +1,13 @@
 $font-primary: 'Oswald', sans-serif;
 $font-secondary: 'Cardo', sans-serif;
+$color-white: #fff;
 
 :root {
     --color-primary-light: #86c232;
     --color-primary-dark: #61892f;
 
     --color-secondary: #222629;
-    --color-grey-dary: #474b4f;
+    --color-grey-dark: #474b4f;
     --color-grey-light: #6b6e70;
 
     --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
@@ -31,4 +32,9 @@ html {
 
 body {
     box-sizing: border-box;
+
+    font-family: $font-secondary;
+    color: var(--color-grey-dark);
+    font-weight: 700;
+    line-height: 1.6;
 }
