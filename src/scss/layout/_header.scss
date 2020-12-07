@@ -4,7 +4,7 @@
     &-nav {
         position: absolute;
         width: 100%;
-        padding-top:5px;
+        padding-top: 5px;
         padding-left: 1rem;
         padding-right: 1rem;
 
@@ -87,14 +87,14 @@
     //as you scroll, have name float up and shrink until it reaches header height and that comes down with you
 }
 
-@keyframes ripple { 
-    from { 
-        opacity: 1; 
-        transform: scale(0); 
-    } 
+@keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
 
-    to { 
-        opacity: 0; 
-        transform: scale(10); 
-    } 
+    to {
+        opacity: 0;
+        transform: scale(10);
+    }
 }
