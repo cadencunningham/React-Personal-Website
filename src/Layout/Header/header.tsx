@@ -17,7 +17,8 @@ const Header = () => {
 
             <label className="header__name">Caden Cunningham</label>
 
-            <div className="header__background-img" />
+            <div className="header__background-layer--1" />
+            <div className="header__background-layer--2" />
         </div>
     );
 };
