@@ -4,12 +4,12 @@ const Header = () => {
     return (
         <div className="header">
             <nav className="header-nav">
-                <div>
+                <div className="header-nav__button-container">
                     <button className="header-nav__button">Home</button>
                     <button className="header-nav__button">Resume</button>
                 </div>
 
-                <div>
+                <div className="header-nav__button-container">
                     <button className="header-nav__button">Socials</button>
                     <button className="header-nav__button">Contact Me</button>
                 </div>
