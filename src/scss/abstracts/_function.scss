@@ -1,0 +1,3 @@
+@function scssColorCreator($scssColor, $transparency: 100%) {
+    @return rgba(var($scssColor), $transparency);
+}

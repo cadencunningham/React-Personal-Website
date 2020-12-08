@@ -1,19 +1,10 @@
 import React from 'react';
+import Navigation from '../Navigation/navigation';
 
 const Header = () => {
     return (
         <div className="header">
-            <nav className="header-nav">
-                <div className="header-nav__button-container">
-                    <button className="header-nav__button">Home</button>
-                    <button className="header-nav__button">Resume</button>
-                </div>
-
-                <div className="header-nav__button-container">
-                    <button className="header-nav__button">Socials</button>
-                    <button className="header-nav__button">Contact Me</button>
-                </div>
-            </nav>
+            <Navigation />
 
             <label className="header__name">Caden Cunningham</label>
 

@@ -1,0 +1,28 @@
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes heart-beat {
+    0% {
+        background-size: 100% 100%;
+    }
+
+    25% {
+        background-size: 105% 105%;
+    }
+
+    50% {
+        background-size: 100% 100%;
+    }
+
+    75% {
+        background-size: 110% 110%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+    }
+}

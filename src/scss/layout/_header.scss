@@ -1,48 +1,5 @@
 .header {
-    color: var(--color-primary-light);
-
-    &-nav {
-        position: absolute;
-        width: 100%;
-        padding-top: 5px;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        z-index: 100;
-
-        display: flex;
-        justify-content: space-between;
-
-        &__button-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 5px;
-        }
-
-        &__button {
-            padding: 1.5rem 2rem;
-            background-color: transparent;
-            border: none;
-            border-radius: 8px;
-            outline: none;
-            cursor: pointer;
-            transition: 0.2s all;
-            color: var(--color-grey-dark);
-            box-shadow: none;
-            transform: translateY(0);
-
-            &:hover,
-            :active {
-                background-color: var(--color-secondary);
-                color: var(--color-grey-light);
-                box-shadow: var(--shadow-light);
-            }
-
-            &:active {
-                background-color: var(--color-primary-light);
-                transform: translateY(3px);
-            }
-        }
-    }
+    color: scssColorCreator(--color-primary-light);
 
     &__name {
         z-index: 1;
@@ -81,7 +38,7 @@
             content: '';
             height: 1rem;
             width: 6rem;
-            background-color: var(--color-primary-light);
+            background-color: scssColorCreator(--color-primary-light);
         }
     }
 
@@ -93,7 +50,7 @@
             top: 0;
             background-size: cover;
             background-position: top left;
-            background-image: radial-gradient(transparent 65%, var(--color-primary-light));
+            background-image: radial-gradient(transparent 65%, scssColorCreator(--color-primary-light));
             height: 100%;
             width: 100%;
         }
@@ -101,25 +58,11 @@
         &--2 {
             z-index: 0;
             background-position: center;
-            background-image: radial-gradient(transparent 63%, var(--color-primary-dark));
-            animation: pulse 1s infinite;
+            background-image: radial-gradient(transparent 63%, scssColorCreator(--color-primary-dark));
+            animation: heart-beat 1.5s infinite;
         }
     }
 }
 
 //begining with name large in the middle with different button options at the top in light green color with no background
 //as you scroll, have name float up and shrink until it reaches header height and that comes down with you
-
-@keyframes pulse {
-    0% {
-        background-size: 100% 100%;
-    }
-
-    50% {
-        background-size: 110% 110%;
-    }
-
-    100% {
-        background-size: 100% 100%;
-    }
-}
