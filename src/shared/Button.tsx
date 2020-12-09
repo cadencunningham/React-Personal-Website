@@ -10,7 +10,6 @@ const Button = (props: IProps) => {
     const { text, disableRipple, onClickHandler } = props;
 
     const addRipple = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        console.log('Ripple');
         if (!disableRipple) {
             const button = event.currentTarget;
             const circle = document.createElement('span');
@@ -29,19 +28,19 @@ const Button = (props: IProps) => {
                 ripple.remove();
             }
 
-            button.appendChild(circle);
+            const childSpan = button.lastChild;
+            childSpan?.appendChild(circle);
         }
     };
 
     const onClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        console.log('CLICK');
         onClickHandler?.(event);
     };
 
     return (
         <button onMouseDown={addRipple} className="button" onClick={onClick}>
-            <span className="button__ripple-root" />
             {text}
+            <span className="button__ripple-root" />
         </button>
     );
 };
