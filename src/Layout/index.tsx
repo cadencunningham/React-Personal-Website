@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from './Header/Header';
 
 interface IProps {
@@ -8,16 +8,8 @@ interface IProps {
 const Layout = (props: IProps) => {
     const { children } = props;
 
-    useEffect(() => {
-        console.log(
-            document.addEventListener('scroll', () => {
-                console.log('SCROLL');
-            })
-        );
-    }, []);
-
     return (
-        <div className="content">
+        <div className="layout">
             <Header />
             {children}
             <div className="footer">FOOTER</div>

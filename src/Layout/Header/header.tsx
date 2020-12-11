@@ -11,6 +11,7 @@ const Header = () => {
             <div className="header__background-container">
                 <div className="header__background-layer--1" />
                 <div className="header__background-layer--2" />
+                <div className="header__background-layer--3" />
             </div>
         </div>
     );

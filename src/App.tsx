@@ -7,7 +7,7 @@ const App = () => {
     return (
         <Router>
             <Layout>
-                <Route path="/" component={() => <div>CONTENT</div>} />
+                <Route path="/" component={() => <div className="temp">CONTENT</div>} />
             </Layout>
         </Router>
     );
