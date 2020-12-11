@@ -12,7 +12,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -100%);
 
         &::before {
             position: absolute;
@@ -42,23 +42,29 @@
         }
     }
 
+    &__background-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
     &__background-layer {
         &--1,
         &--2 {
             z-index: 1;
-            position: absolute;
-            top: 0;
             background-size: cover;
             background-position: top left;
-            background-image: radial-gradient(transparent 65%, scssColorCreator(--color-primary-light));
+            background-image: radial-gradient(transparent 50%, scssColorCreator(--color-primary-light));
             height: 100%;
             width: 100%;
         }
 
         &--2 {
+            position: absolute;
+            top: 0;
             z-index: 0;
             background-position: center;
-            background-image: radial-gradient(transparent 63%, scssColorCreator(--color-primary-dark));
+            background-image: radial-gradient(transparent 48%, scssColorCreator(--color-primary-dark));
             animation: heart-beat 1.5s infinite;
         }
     }

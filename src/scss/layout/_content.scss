@@ -6,8 +6,4 @@
     display: grid;
     grid-template-rows: minmax(min-content, 100vh) 1fr minmax(min-content, 4rem);
     grid-row-gap: 2rem;
-
-    //Add a scroll listener so that after you try to scroll, it allows it
-    overflow: hidden;
-    max-height: 100vh;
 }
