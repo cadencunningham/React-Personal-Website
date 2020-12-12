@@ -7,15 +7,16 @@
     outline: none;
     cursor: pointer;
     transition: 0.4s all;
-    color: scssColorCreator(--color-grey-dark);
+    color: scssColorCreator(--color-grey-light);
     box-shadow: none;
     transform: translateY(0);
     overflow: hidden;
 
+    &--selected,
     &:hover,
     &:active {
         background-color: scssColorCreator(--color-secondary);
-        color: scssColorCreator(--color-grey-light);
+        color: scssColorCreator(--color-primary-light);
         box-shadow: scssColorCreator(--shadow-light);
     }
 
