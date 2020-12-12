@@ -1,6 +1,57 @@
 .header {
-    color: var(--color-primary-light);
-    font-family: $font-primary;
-    font-size: 3rem;
-    background-color: var(--color-secondary);
+    background-color: scssColorCreator(--color-secondary);
+    color: scssColorCreator(--color-primary-light);
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__background-container {
+        position: relative;
+        height: 70%;
+        width: 70%;
+        border-radius: 100%;
+        overflow: hidden;
+        align-self: center;
+    }
+
+    &__background-layer {
+        &--1,
+        &--2,
+        &--3 {
+            z-index: 1;
+            background-size: cover;
+            border-radius: 100%;
+            background-position: top left;
+            background: radial-gradient(transparent 60%, scssColorCreator(--color-grey-light));
+            height: 100%;
+            width: 100%;
+        }
+
+        &--2,
+        &--3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &--2 {
+            opacity: 100%;
+            height: 90%;
+            width: 90%;
+            background: radial-gradient(transparent 58%, scssColorCreator(--color-primary-dark));
+            animation: heart-beat 1.5s infinite;
+        }
+
+        &--3 {
+            opacity: 100%;
+            height: 80%;
+            width: 80%;
+            background: radial-gradient(transparent 60%, scssColorCreator(--color-grey-light));
+        }
+    }
 }
+
+//begining with name large in the middle with different button options at the top in light green color with no background
+//as you scroll, have name float up and shrink until it reaches header height and that comes down with you

@@ -1,5 +1,16 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/function';
+@import './abstracts/general';
+
+@import './themes/theme';
+
 @import './base/base';
+@import './base/animations';
 
 @import './layout/header';
 @import './layout/footer';
-@import './layout/content';
+@import './layout/layout';
+@import './layout/navigation';
+
+@import './components/buttons';

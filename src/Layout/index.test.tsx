@@ -20,7 +20,7 @@ describe('TESTING for Layout Component', () => {
                 <div>HERE</div>
             </Layout>
         );
-        expect(getByText('HEADER')).toBeTruthy();
+        expect(getByText('Caden Cunningham')).toBeTruthy();
     });
     it('The text value of FOOTER should be present', () => {
         const { getByText } = render(

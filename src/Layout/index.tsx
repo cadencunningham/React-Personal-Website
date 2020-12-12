@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 
 interface IProps {
     children: any;
@@ -6,9 +7,10 @@ interface IProps {
 
 const Layout = (props: IProps) => {
     const { children } = props;
+
     return (
-        <div className="content-container">
-            <div className="header">HEADER</div>
+        <div className="layout">
+            <Header />
             {children}
             <div className="footer">FOOTER</div>
         </div>
