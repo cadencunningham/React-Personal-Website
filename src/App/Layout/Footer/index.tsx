@@ -1,5 +1,5 @@
 import React from 'react';
-import { GITHUB_PATH, LINKED_IN_PATH } from '../../constants/svgPaths';
+import { GITHUB_PATH, LINKED_IN_PATH } from '../../../shared/constants/svgPaths';
 import LinkButton from '../../shared/LinkButton';
 import SvgIcon from '../../shared/SvgIcon';
 

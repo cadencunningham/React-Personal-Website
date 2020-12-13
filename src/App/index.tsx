@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Layout from './Layout';
-import './scss/main.scss';
+import '../scss/main.scss';
 // https://www.awwwards.com/sites/veille-reputation-squad
 const App = () => {
     return (
