@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../../shared/Button';
 
 let lastCurrentHeight = 0;
+const NAV_COLLAPSE_CLASS = 'nav__collaspe';
 
 const Navigation = () => {
+    const [navExpandClass, setNavExpandClass] = useState('');
+
     useEffect(() => {
         document.addEventListener('scroll', () => {
             //Start Nav Name
+
             const windowHeight = window.innerHeight / 2;
             const currentHeight = window.pageYOffset;
             const heightDifference = windowHeight - currentHeight;
@@ -18,16 +22,17 @@ const Navigation = () => {
                 style + (newNameHeight >= 4.315 ? `top:${newNameHeight}vh` : `transform:translate(-50%,0%);top:unset;`);
 
             document.getElementsByClassName('nav-name')[0].setAttribute('style', style);
+
             //End Nav Name
 
             if (heightDifference <= 0) {
                 if (currentHeight < lastCurrentHeight) {
-                    document.getElementsByClassName('nav')[0].setAttribute('style', 'transform:translate(0,0)');
+                    setNavExpandClass('');
                 } else {
-                    document.getElementsByClassName('nav')[0].setAttribute('style', 'transform:translate(0,-100%)');
+                    setNavExpandClass(NAV_COLLAPSE_CLASS);
                 }
             } else {
-                document.getElementsByClassName('nav')[0].setAttribute('style', 'transform:translate(0,0)');
+                setNavExpandClass('');
             }
 
             lastCurrentHeight = currentHeight;
@@ -35,7 +40,7 @@ const Navigation = () => {
     }, []);
 
     return (
-        <nav className="nav">
+        <nav className={['nav', navExpandClass].join('')}>
             <div className="gen__width--100 gen__justify-content--sb gen__display--flex gen_align-items--center">
                 <div className="nav__button-container">
                     <Button text={'Home'} selected />
