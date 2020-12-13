@@ -7,9 +7,9 @@ const Header = () => {
             <Navigation />
 
             <div className="header__background-container">
-                <div className="header__background-layer--1" />
-                <div className="header__background-layer--2" />
-                <div className="header__background-layer--3" />
+                <div className="header__background-layer--inner" />
+                <div className="header__background-layer--center-pulse" />
+                <div className="header__background-layer--outer" />
             </div>
         </div>
     );
