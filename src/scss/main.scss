@@ -1,12 +1,12 @@
 @import './abstracts/variables';
 @import './abstracts/mixins';
 @import './abstracts/function';
-@import './abstracts/general';
 
 @import './themes/theme';
 
 @import './base/base';
 @import './base/animations';
+@import './base/general';
 
 @import './layout/header';
 @import './layout/footer';
