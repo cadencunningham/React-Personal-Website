@@ -12,8 +12,7 @@ const NavName = () => {
             let style = `font-size:${newFontSize >= 4 ? newFontSize : 4}rem;`;
 
             style =
-                style +
-                (newNameHeight >= 4.315 ? `top:${newNameHeight}%` : `position:relative;transform:unset;left:unset;`);
+                style + (newNameHeight >= 4.315 ? `top:${newNameHeight}%` : `transform:translate(-50%,0%);top:unset;`);
 
             document.getElementsByClassName('nav-name')[0].setAttribute('style', style);
         });
