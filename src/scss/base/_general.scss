@@ -13,3 +13,9 @@
 .gen_align-items--center {
     align-items: center;
 }
+
+.gen_margin-right--small {
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+}

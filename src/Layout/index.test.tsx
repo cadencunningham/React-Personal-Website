@@ -28,6 +28,6 @@ describe('TESTING for Layout Component', () => {
                 <div>HERE</div>
             </Layout>
         );
-        expect(getByText('FOOTER')).toBeTruthy();
+        expect(getByText('Caden Cunningham')).toBeTruthy();
     });
 });

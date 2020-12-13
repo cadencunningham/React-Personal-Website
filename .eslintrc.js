@@ -36,7 +36,7 @@ module.exports = {
         "@typescript-eslint/no-explicit-any":1,
         "no-duplicate-imports":2,
         "getter-return":2,
-        "max-len":[2, {"code":120,"tabWidth":6}],
+        "max-len":[2, {"code":200,"tabWidth":6}],
         "no-eval":2,
         "no-extra-bind":2,
         "no-unneeded-ternary":2,

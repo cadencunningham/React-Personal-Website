@@ -1,8 +1,10 @@
 import React from 'react';
+import Footer from './Footer';
 import Header from './Header';
+import Navigation from './Navigation';
 
 interface IProps {
-    children: any;
+    children: JSX.Element;
 }
 
 const Layout = (props: IProps) => {
@@ -10,9 +12,10 @@ const Layout = (props: IProps) => {
 
     return (
         <div className="layout">
+            <Navigation />
             <Header />
             {children}
-            <div className="footer">FOOTER</div>
+            <Footer />
         </div>
     );
 };
