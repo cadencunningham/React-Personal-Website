@@ -15,7 +15,6 @@
     &--selected,
     &:hover,
     &:active {
-        background-color: scssColorCreator(--color-secondary);
         color: scssColorCreator(--color-primary-light);
         box-shadow: scssColorCreator(--shadow-light);
     }

@@ -6,6 +6,9 @@
     padding-left: 1rem;
     padding-right: 1rem;
     z-index: 100;
+    transition: all 0.2s;
+
+    transform: translate(0, 0);
 
     &__button-container {
         display: grid;
