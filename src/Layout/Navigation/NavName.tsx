@@ -9,13 +9,13 @@ const NavName = () => {
             const newFontSize = (heightDifference / windowHeight) * 8;
             const newNameHeight = (heightDifference / windowHeight) * 50;
 
-            document.getElementsByClassName('nav-name')[0].setAttribute(
-                'style',
-                `
-                    top:${newNameHeight >= 4.315 ? newNameHeight : 4.315}%;
-                    font-size:${newFontSize >= 4 ? newFontSize : 4}rem
-                `
-            );
+            let style = `font-size:${newFontSize >= 4 ? newFontSize : 4}rem;`;
+
+            style =
+                style +
+                (newNameHeight >= 4.315 ? `top:${newNameHeight}%` : `position:relative;transform:unset;left:unset;`);
+
+            document.getElementsByClassName('nav-name')[0].setAttribute('style', style);
         });
     }, []);
 
