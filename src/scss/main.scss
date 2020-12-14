@@ -6,7 +6,7 @@
 
 @import './base/base';
 @import './base/animations';
-@import './base/general';
+@import './base/generic';
 
 @import './layout/header';
 @import './layout/footer';
@@ -14,3 +14,6 @@
 @import './layout/nav';
 
 @import './components/buttons';
+@import './components/featureList';
+
+@import './pages/home';
