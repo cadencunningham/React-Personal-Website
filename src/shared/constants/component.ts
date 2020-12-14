@@ -27,6 +27,10 @@ export const features: IListElement[] = [
     },
     {
         label: 'Create feature list',
+        completed: true,
+    },
+    {
+        label: 'Launch live site',
         active: true,
     },
     {
