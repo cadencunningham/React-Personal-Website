@@ -52,6 +52,9 @@ export const features: IListElement[] = [
         label: 'Create contact me functionality',
     },
     {
+        label: 'Make mobile friendly',
+    },
+    {
         label: 'Color pickers for changing theme colors as user',
     },
     {
