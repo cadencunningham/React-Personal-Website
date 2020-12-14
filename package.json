@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --mode development --hot --open",
     "build": "webpack --mode production",
     "fix:styles": "stylelint \"*/**/*.{scss,css}\" --fix",
-    "lint": "tsc --noEmit && eslint \"*/**/*.{js,ts,tsx}\" --fix && npm run fix:styles"
+    "lint": "cd src && tsc --noEmit && eslint \"*/**/*.{js,ts,tsx}\" --fix && npm run fix:styles"
   },
   "jest": {
     "transform": {
