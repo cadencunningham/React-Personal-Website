@@ -57,4 +57,7 @@ export const features: IListElement[] = [
     {
         label: 'Create jira board',
     },
+    {
+        label: 'Link to youtube channel',
+    },
 ];
