@@ -43,7 +43,7 @@ const Navigation = () => {
             <div className="gen__width--100 gen__justify-content--sb gen__display--flex gen_align-items--center">
                 <div className="nav__button-container">
                     <Button text={'Home'} selected />
-                    <Button text={'Jira Board'} />
+                    <Button text={'Dev Resources'} />
                 </div>
 
                 <label className={NAV_NAME_CLASS}>Caden Cunningham</label>
