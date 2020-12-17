@@ -8,20 +8,6 @@
 }
 
 .color-themer {
-    // make card component
-    &__container {
-        border: solid 2px scssColorCreator(--color-tertiary-light);
-        text-align: center;
-        padding: 1rem;
-    }
-
-    &__header {
-        font-family: 'Oswald', sans-serif;
-        border-bottom: solid 2px scssColorCreator(--color-tertiary-light);
-        font-size: 4rem;
-        color: scssColorCreator(--color-primary-light);
-    }
-
     &__pickers {
         display: grid;
         grid-template-rows: repeat(3, min-content);

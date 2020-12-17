@@ -12,6 +12,7 @@ import {
     VAR_COLOR_TERTIARY_DARK,
     VAR_COLOR_TERTIARY_LIGHT,
 } from '../../shared/constants/theme';
+import Card from '../shared/Card';
 import ColorPicker from '../shared/ColorPicker';
 
 const ColorThemer = () => {
@@ -20,8 +21,7 @@ const ColorThemer = () => {
     };
 
     return (
-        <div className="color-themer__container">
-            <div className="color-themer__header">Color Theme Pickers</div>
+        <Card header={'Color Theme Pickers'}>
             <div className="color-themer__pickers">
                 <ColorPicker
                     defaultRgba={DEFAULT_COLOR_PRIMARY_LIGHT}
@@ -49,7 +49,7 @@ const ColorThemer = () => {
                     onChangeHandler={(color) => onColorChangeHandler(color, VAR_COLOR_TERTIARY_DARK)}
                 />
             </div>
-        </div>
+        </Card>
     );
 };
 
