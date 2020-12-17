@@ -3,6 +3,8 @@
     border: solid 2px scssColorCreator(--color-grey-light);
     padding: 1rem;
     color: scssColorCreator(--color-primary-light);
+    width: 100%;
+    text-align: center;
 
     &__header {
         font-family: 'Oswald', sans-serif;

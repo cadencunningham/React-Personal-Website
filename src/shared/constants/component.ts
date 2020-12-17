@@ -53,6 +53,7 @@ export const features: IListElement[] = [
     },
     {
         label: 'Make mobile friendly',
+        active: true,
     },
     {
         label: 'Color pickers for changing theme colors as user',
