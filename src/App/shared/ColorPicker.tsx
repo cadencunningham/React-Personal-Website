@@ -32,12 +32,7 @@ const ColorPicker = (props: IProps) => {
 
     return (
         <div className={['color-picker__container', containerClassName || ''].join(' ')}>
-            <div
-                className={['color-picker__header', headerClassName || ''].join(' ')}
-                style={{ color: `rgba(${color && Object.values(color).toString()})` }}
-            >
-                {header}
-            </div>
+            <div className={['color-picker__header', headerClassName || ''].join(' ')}>{header}</div>
             <SliderPicker color={color} onChange={onChange} />
         </div>
     );

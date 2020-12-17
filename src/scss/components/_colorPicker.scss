@@ -2,12 +2,11 @@
     &__container {
         text-align: center;
         padding: 3rem 1rem 4rem 1rem;
-        border-radius: 4px;
-        border: 2px solid scssColorCreator(--color-grey-light);
     }
 
     &__header {
         margin-bottom: 2rem;
         font-size: 2rem;
+        color: scssColorCreator(--color-tertiary-light);
     }
 }

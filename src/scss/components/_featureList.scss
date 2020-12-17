@@ -1,6 +1,6 @@
 .feature-list {
     border-radius: 4px;
-    border: solid 2px scssColorCreator(--color-grey-light);
+    border: solid 2px scssColorCreator(--color-tertiary-light);
     padding: 1rem;
     color: scssColorCreator(--color-primary-light);
     width: 100%;
@@ -9,7 +9,7 @@
     &__header {
         font-family: 'Oswald', sans-serif;
         color: inherit;
-        border-bottom: solid 2px scssColorCreator(--color-grey-light);
+        border-bottom: solid 2px scssColorCreator(--color-tertiary-light);
         font-size: 4rem;
     }
 
@@ -22,14 +22,14 @@
     &__element {
         padding: 0.5rem;
         font-size: 1.5rem;
-        color: scssColorCreator(--color-grey-light);
+        color: scssColorCreator(--color-tertiary-light);
 
         &--active {
-            color: scssColorCreator(--color-primary-light);
+            color: scssColorCreator(--color-tertiary-light);
         }
 
         &--completed {
-            color: scssColorCreator(--color-grey-dark);
+            color: scssColorCreator(--color-tertiary-dark);
             text-decoration: line-through;
         }
     }
