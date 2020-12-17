@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { ColorResult, RGBColor, SliderPicker } from 'react-color';
-import { IRgbaObject } from '../../shared/interfaces/component';
 
 interface IProps {
-    defaultRgba?: IRgbaObject;
-    rgba?: IRgbaObject;
+    defaultRgba?: RGBColor;
+    rgba?: RGBColor;
     header?: string;
     headerClassName?: string;
     containerClassName?: string;

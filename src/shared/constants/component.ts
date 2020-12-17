@@ -57,6 +57,7 @@ export const features: IListElement[] = [
     },
     {
         label: 'Color pickers for changing theme colors as user',
+        active: true,
     },
     {
         label: 'Create jira board',
