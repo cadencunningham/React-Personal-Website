@@ -12,13 +12,25 @@
 */
 html {
     font-size: 62.5%;
+
+    @media screen and (max-width: $bp-large) {
+        font-size: 55%;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        font-size: 42.5%;
+    }
+
+    @media screen and (max-width: $bp-smaller) {
+        font-size: 30%;
+    }
 }
 
 body {
     box-sizing: border-box;
 
     font-family: $font-secondary;
-    color: scssColorCreator(--color-grey-dark);
+    color: scssColorCreator(--color-tertiary-dark);
     font-weight: 700;
     line-height: 1.6;
 }

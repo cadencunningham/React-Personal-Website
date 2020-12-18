@@ -2,25 +2,26 @@ import React from 'react';
 import { IListElement } from '../../shared/interfaces/component';
 
 interface IProps {
-    header: string;
+    header?: string;
     headerClassName?: string;
     list: IListElement[];
+    noContainerClass?: boolean;
 }
 
 const TableList = (props: IProps) => {
-    const { header, headerClassName, list } = props;
+    const { header, headerClassName, list, noContainerClass } = props;
 
     return (
-        <div className="feature-list">
-            <h2 className={headerClassName || 'feature-list__header'}>{header}</h2>
-            <ul className="feature-list__list">
+        <div className={!noContainerClass ? 'table-list' : ''}>
+            {header && <h2 className={headerClassName || 'table-list__header'}>{header}</h2>}
+            <ul className="table-list__list">
                 {list.map((element) => (
                     <li
                         key={element.label}
                         className={[
-                            'feature-list__element',
-                            element.active ? 'feature-list__element--active' : '',
-                            element.completed ? 'feature-list__element--completed' : '',
+                            'table-list__element',
+                            element.active ? 'table-list__element--active' : '',
+                            element.completed ? 'table-list__element--completed' : '',
                         ].join(' ')}
                     >
                         {element.label}

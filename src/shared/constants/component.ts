@@ -53,14 +53,22 @@ export const features: IListElement[] = [
     },
     {
         label: 'Make mobile friendly',
+        active: true,
     },
     {
         label: 'Color pickers for changing theme colors as user',
+        active: true,
     },
     {
         label: 'Create jira board',
     },
     {
         label: 'Link to youtube channel',
+    },
+    {
+        label: 'BUG - Name not centered',
+    },
+    {
+        label: 'BUG - Color pickers dont work in IE',
     },
 ];

@@ -2,3 +2,11 @@ $font-primary: 'Oswald', sans-serif;
 $font-secondary: 'Cardo', sans-serif;
 $color-white: #fff;
 $color-black: rgb(25, 25, 25);
+
+//MEDIA QUERIES
+$bp-largest: 75em; //1200px - 1200-16(default font size)
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 40.625em; //650px
+$bp-smaller: 39.0625em; //625px
+$bp-mini: 25em; //400px

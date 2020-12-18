@@ -2,12 +2,20 @@
     color: scssColorCreator(--color-primary-light);
     position: fixed;
     width: 100%;
-    padding-top: 5px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem 5px;
     z-index: 100;
     transition: transform 0.2s;
     transform: translate(0, 0);
+    background-color: scssColorCreator(--color-secondary);
+    border-bottom: 1px solid scssColorCreator(--color-tertiary-dark);
+
+    &__container {
+        min-height: 4rem;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
 
     &__collapse {
         transform: translate(0, -100%);
@@ -17,6 +25,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 5px;
+    }
+
+    @media screen and (max-width: $bp-smaller) {
+        &__button-container {
+            display: none;
+        }
+        border-bottom: unset;
     }
 }
 
@@ -58,5 +73,13 @@
         height: 0.15em;
         width: 0.6em;
         background-color: scssColorCreator(--color-primary-light);
+    }
+
+    //BUG WHERE THE NAME ISNT EXACTLY CENTERED
+    @media screen and (max-width: $bp-medium) {
+        &::before,
+        &::after {
+            display: none;
+        }
     }
 }

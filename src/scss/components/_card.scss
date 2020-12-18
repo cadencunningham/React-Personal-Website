@@ -1,0 +1,15 @@
+.card {
+    border-radius: 4px;
+    border: solid 2px scssColorCreator(--color-tertiary-light);
+    padding: 1rem;
+    color: scssColorCreator(--color-primary-light);
+    width: 100%;
+    text-align: center;
+
+    &__header {
+        font-family: 'Oswald', sans-serif;
+        color: inherit;
+        border-bottom: solid 2px scssColorCreator(--color-tertiary-light);
+        font-size: 4rem;
+    }
+}
