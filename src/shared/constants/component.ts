@@ -65,4 +65,10 @@ export const features: IListElement[] = [
     {
         label: 'Link to youtube channel',
     },
+    {
+        label: 'BUG - Name not centered',
+    },
+    {
+        label: 'BUG - Color pickers dont work in IE',
+    },
 ];
