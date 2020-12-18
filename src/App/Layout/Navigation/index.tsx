@@ -19,7 +19,7 @@ const Navigation = () => {
 
             let style = `font-size:${newFontSize >= 4 ? newFontSize : 4}rem;`;
             style =
-                style + (newNameHeight >= 4.315 ? `top:${newNameHeight}vh` : `transform:translate(-50%,0%);top:unset;`);
+                style + (newNameHeight >= 4.315 ? `top:${newNameHeight}vh` : `transform:translateX(-50%);top:unset;`);
 
             document.getElementsByClassName(NAV_NAME_CLASS)[0].setAttribute('style', style);
             //End Nav Name
@@ -40,10 +40,10 @@ const Navigation = () => {
 
     return (
         <nav className={['nav', navExpandClass].join(' ')}>
-            <div className="gen__width--100 gen__justify-content--sb gen__display--flex gen_align-items--center">
+            <div className="nav__container">
                 <div className="nav__button-container">
                     <Button text={'Home'} selected />
-                    <Button text={'Dev Resources'} />
+                    <Button text={'Resources'} />
                 </div>
 
                 <label className={NAV_NAME_CLASS}>Caden Cunningham</label>
