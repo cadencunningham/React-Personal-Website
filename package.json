@@ -2,6 +2,12 @@
   "name": "barebones-react",
   "version": "1.0.0",
   "description": "",
+  "browserslist": [
+    "ie > 9",
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
@@ -79,6 +85,7 @@
   "dependencies": {
     "dart-sass": "^1.25.0",
     "react": "^16.14.0",
+    "react-app-polyfill": "^2.0.0",
     "react-color": "^2.19.3",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
