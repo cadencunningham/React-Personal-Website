@@ -22,7 +22,28 @@ module.exports = {
             },
             {
                 test: /\.(css|scss)$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
+                use: [
+                    "style-loader", 
+                    "css-loader", 
+                
+                    {
+                        loader:"postcss-loader",
+                        options:{
+                            postcssOptions:{
+                                plugins:[
+                                    [
+                                        "postcss-preset-env",
+                                        {
+                                            //options
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                    },
+                
+                    "sass-loader"
+                ]
             },
             {
                 test: /\.(svg|png|jpe?g|gif)$/,
