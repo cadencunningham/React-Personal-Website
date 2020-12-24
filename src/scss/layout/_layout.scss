@@ -2,12 +2,8 @@
     background-color: scssColorCreator(--color-secondary);
     min-height: 100vh;
     position: relative;
+    min-width: fit-content;
 
     display: grid;
     grid-template-rows: minmax(min-content, 100vh) 1fr minmax(min-content, 4rem);
-}
-
-.temp {
-    height: 100vh;
-    background-color: scssColorCreator(--color-secondary);
 }
