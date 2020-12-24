@@ -7,10 +7,10 @@ import ColorThemer from './ColorThemer';
 const Home = () => {
     return (
         <div className="home">
+            <ColorThemer />
             <Card header="Upcoming Feature List">
                 <TableList list={features} />
             </Card>
-            <ColorThemer />
         </div>
     );
 };

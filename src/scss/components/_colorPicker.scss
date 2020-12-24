@@ -1,12 +1,24 @@
 .color-picker {
     &__container {
-        text-align: center;
+        display: flex;
         padding: 3rem 1rem 4rem 1rem;
+        flex-direction: column;
+        align-items: center;
+        min-width: 300px;
     }
 
     &__header {
         margin-bottom: 2rem;
         font-size: 2rem;
         color: scssColorCreator(--color-tertiary-light);
+    }
+
+    &__picker {
+        background-color: scssColorCreator(--color-tertiary-dark) !important;
+        max-width: 350px;
+
+        input {
+            text-align: center;
+        }
     }
 }
