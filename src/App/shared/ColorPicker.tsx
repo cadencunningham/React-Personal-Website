@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ColorResult, RGBColor, SliderPicker } from 'react-color';
+import { ColorResult, RGBColor, SketchPicker } from 'react-color';
 
 interface IProps {
     defaultRgba?: RGBColor;
@@ -33,7 +33,14 @@ const ColorPicker = (props: IProps) => {
     return (
         <div className={['color-picker__container', containerClassName || ''].join(' ')}>
             <div className={['color-picker__header', headerClassName || ''].join(' ')}>{header}</div>
-            <SliderPicker color={color} onChange={onChange} />
+            <SketchPicker
+                className="color-picker__picker"
+                width="50%"
+                disableAlpha
+                color={color}
+                onChange={onChange}
+                presetColors={[]}
+            />
         </div>
     );
 };

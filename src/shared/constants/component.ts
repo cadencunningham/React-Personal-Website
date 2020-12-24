@@ -67,8 +67,10 @@ export const features: IListElement[] = [
     },
     {
         label: 'BUG - Name not centered',
+        active: true,
     },
     {
         label: 'BUG - Color pickers dont work in IE',
+        active: true,
     },
 ];

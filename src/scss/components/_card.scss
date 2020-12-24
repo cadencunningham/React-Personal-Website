@@ -5,6 +5,7 @@
     color: scssColorCreator(--color-primary-light);
     width: 100%;
     text-align: center;
+    min-width: fit-content;
 
     &__header {
         font-family: 'Oswald', sans-serif;

@@ -6,7 +6,8 @@
     "ie > 9",
     "last 1 chrome version",
     "last 1 firefox version",
-    "last 1 safari version"
+    "last 1 safari version",
+    "not dead"
   ],
   "main": "index.js",
   "scripts": {
@@ -67,6 +68,8 @@
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.5",
     "jest": "^26.6.3",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "react-hot-loader": "^4.13.0",
     "sass-loader": "^9.0.3",
