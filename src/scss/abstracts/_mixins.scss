@@ -12,3 +12,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin target-metro {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+}

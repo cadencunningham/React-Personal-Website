@@ -20,8 +20,9 @@
 
     &__icon {
         cursor: pointer;
+
         height: 3rem;
-        width: auto;
+        width: 3rem;
         fill: scssColorCreator(--color-tertiary-light);
         transition: all 0.2s;
 
