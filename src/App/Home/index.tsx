@@ -3,6 +3,7 @@ import { features } from '../../shared/constants/component';
 import Card from '../shared/Card';
 import TableList from '../shared/TableList';
 import ColorThemer from './ColorThemer';
+import YoutubeChannel from './YoutubeChannel';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Card header="Upcoming Feature List">
                 <TableList list={features} />
             </Card>
+            <YoutubeChannel />
         </div>
     );
 };

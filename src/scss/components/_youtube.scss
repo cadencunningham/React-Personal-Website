@@ -1,0 +1,9 @@
+.youtube {
+    &__video {
+        border-radius: 8px;
+        border: 2px solid scssColorCreator(--color-primary-light);
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        max-width: 100%;
+    }
+}
