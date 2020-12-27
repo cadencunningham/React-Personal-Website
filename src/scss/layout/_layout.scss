@@ -1,9 +1,12 @@
 .layout {
     background-color: scssColorCreator(--color-secondary);
+    width: 100vw;
     min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
     position: relative;
-    min-width: fit-content;
 
     display: grid;
     grid-template-rows: minmax(min-content, 100vh) 1fr minmax(min-content, 4rem);
+    grid-auto-columns: 100%;
 }

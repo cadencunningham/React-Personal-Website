@@ -31,7 +31,7 @@ export const features: IListElement[] = [
     },
     {
         label: 'Launch live site',
-        active: true,
+        completed: true,
     },
     {
         label: 'Create nav functionality for pages',
@@ -64,13 +64,17 @@ export const features: IListElement[] = [
     },
     {
         label: 'Link to youtube channel',
+        active: true,
     },
     {
         label: 'BUG - Name not centered',
-        active: true,
+        completed: true,
     },
     {
         label: 'BUG - Color pickers dont work in IE',
         active: true,
+    },
+    {
+        label: 'Add custom website domain',
     },
 ];

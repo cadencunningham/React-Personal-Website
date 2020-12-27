@@ -86,12 +86,14 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "dart-sass": "^1.25.0",
     "react": "^16.14.0",
     "react-app-polyfill": "^2.0.0",
     "react-color": "^2.19.3",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
+    "react-youtube": "^7.13.0",
     "sass": "^1.30.0"
   }
 }
