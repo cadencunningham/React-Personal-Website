@@ -4,7 +4,7 @@ import Youtube from 'react-youtube';
 import Card from '../shared/Card';
 
 const YoutubeChannel = () => {
-    const [videoId, setVideoId] = useState('Eme5lSQ7m8U');
+    const [videoId, setVideoId] = useState('I9ZgQ5T9l7Q');
     useEffect(() => {
         //`https://www.googleapis.com/youtube/v3/search?key={your_key_here}&channelId={channel_id_here}&part=snippet,id&order=date&maxResults=1`
         // AIzaSyDHZAd2d_qBpal7PKvdaB1KFmMJlEeU7i4  - api key
@@ -13,7 +13,7 @@ const YoutubeChannel = () => {
         const fetchLastVideoId = async () => {
             await axios
                 .get(
-                    `https://www.googleapis.com/youtube/v3/search?key=${'AIzaSyDHZAd2d_qBpal7PKvdaB1KFmMJlEeU7i4'}&channelId=${'UCUT8RoNBTJvwW1iErP6-b-A'}&part=snippet,id&order=date&maxResults=1`
+                    `https://www.googleapis.com/youtube/v3/search?key=${'AIzaSyDHZAd2d_qBpal7PKvdaB1KFmMJlEeU7i4'}&channelId=${'UCtMlG0yI_A0hcl7yE8jbvUA'}&part=snippet,id&order=date&maxResults=1`
                 )
                 .then((data) => {
                     data?.data?.items[0]?.id.videoId && setVideoId(data?.data?.items[0]?.id.videoId);
@@ -30,7 +30,7 @@ const YoutubeChannel = () => {
     }, []);
 
     return (
-        <Card header="Youtube Channel">
+        <Card header="Modern Mindset">
             <Youtube
                 className="youtube__video"
                 videoId={videoId}
