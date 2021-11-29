@@ -57,7 +57,9 @@ module.exports = {
             },
         ]
     },
-    resolve: {extensions: ["*", ".js", ".jsx", ".ts", ".tsx", ".json"]},
+    resolve: {
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
+    },
     output:{
         filename: "bundle.js",
         chunkFilename: '[id].js',
