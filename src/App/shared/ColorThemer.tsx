@@ -12,11 +12,18 @@ import {
     VAR_COLOR_TERTIARY_DARK,
     VAR_COLOR_TERTIARY_LIGHT,
 } from '../../shared/constants/theme';
-import Card from '../shared/Card';
-import ColorPicker from '../shared/ColorPicker';
+import Card from './Card';
+import ColorPicker from './ColorPicker';
 
-const ColorThemer = () => {
-    const onColorChangeHandler = (color: RGBColor, varString: string) => {
+interface IProps{
+    onColorChangeHandler?: (color: RGBColor, varString: string)=>void
+}
+
+const ColorThemer = (props:IProps) => {
+    const {onColorChangeHandler} = props;
+    
+    const _onColorChangeHandler = (color: RGBColor, varString: string) => {
+        onColorChangeHandler && onColorChangeHandler(color, varString);
         document.documentElement.style.setProperty(varString, Object.values(color).slice(0, 3).toString());
     };
 
@@ -26,27 +33,27 @@ const ColorThemer = () => {
                 <ColorPicker
                     defaultRgba={DEFAULT_COLOR_PRIMARY_LIGHT}
                     header="Primary Color - Light"
-                    onChangeHandler={(color) => onColorChangeHandler(color, VAR_COLOR_PRIMARY_LIGHT)}
+                    onChangeHandler={(color) => _onColorChangeHandler(color, VAR_COLOR_PRIMARY_LIGHT)}
                 />
                 <ColorPicker
                     defaultRgba={DEFAULT_COLOR_PRIMARY_DARK}
                     header="Primary Color - Dark"
-                    onChangeHandler={(color) => onColorChangeHandler(color, VAR_COLOR_PRIMARY_DARK)}
+                    onChangeHandler={(color) => _onColorChangeHandler(color, VAR_COLOR_PRIMARY_DARK)}
                 />
                 <ColorPicker
                     defaultRgba={DEFAULT_COLOR_SECONDARY}
                     header="Secondary Color"
-                    onChangeHandler={(color) => onColorChangeHandler(color, VAR_COLOR_SECONDARY)}
+                    onChangeHandler={(color) => _onColorChangeHandler(color, VAR_COLOR_SECONDARY)}
                 />
                 <ColorPicker
                     defaultRgba={DEFAULT_COLOR_TERTIARY_LIGHT}
                     header="Tertiary Color - Light"
-                    onChangeHandler={(color) => onColorChangeHandler(color, VAR_COLOR_TERTIARY_LIGHT)}
+                    onChangeHandler={(color) => _onColorChangeHandler(color, VAR_COLOR_TERTIARY_LIGHT)}
                 />
                 <ColorPicker
                     defaultRgba={DEFAULT_COLOR_TERTIARY_DARK}
                     header="Tertiary Color - Dark"
-                    onChangeHandler={(color) => onColorChangeHandler(color, VAR_COLOR_TERTIARY_DARK)}
+                    onChangeHandler={(color) => _onColorChangeHandler(color, VAR_COLOR_TERTIARY_DARK)}
                 />
             </div>
         </Card>

@@ -2,13 +2,14 @@ import React from 'react';
 
 interface IProps {
     text: string;
+    btnClassName?: string;
     onClickHandler?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     disableRipple?: boolean;
     selected?: boolean;
 }
 
 const Button = (props: IProps) => {
-    const { text, disableRipple, onClickHandler, selected } = props;
+    const { text, disableRipple, onClickHandler, selected, btnClassName } = props;
 
     const addRipple = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         if (!disableRipple) {
@@ -41,7 +42,7 @@ const Button = (props: IProps) => {
     return (
         <button
             onMouseDown={addRipple}
-            className={['button', selected ? 'button--selected' : ''].join(' ')}
+            className={['button', selected ? 'button--selected' : '', btnClassName? btnClassName: ''].join(' ')}
             onClick={onClick}
         >
             {text}
