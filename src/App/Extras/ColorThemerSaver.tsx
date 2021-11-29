@@ -16,6 +16,8 @@ const ColorThemerSaver = () => {
     //add custom color classes - primary / secondary / etc. Will need class enum rep
     // add functionality for the save and cancel feature
 
+    //look into setting the name scroll part for only the home page
+
     return (
         <div className='color-themer-saver'>
             <ColorThemer/>
