@@ -6,3 +6,14 @@ export const ROUTES_EXTRAS = {
     text: 'Extras',
     path:'/extras'
 };
+
+export const ROUTES_RESUME = {
+    text: 'Resume',
+    path:'/resume'
+};
+
+export const ROUTES_CONTACT_ME = {
+    text: 'Contact Me',
+    path:'/contact_me'
+};
+

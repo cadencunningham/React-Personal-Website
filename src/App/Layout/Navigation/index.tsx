@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation } from "react-router-dom";
-import { ROUTES_EXTRAS, ROUTES_HOME } from '../../../shared/constants/routes';
+import { ROUTES_CONTACT_ME, ROUTES_EXTRAS, ROUTES_HOME, ROUTES_RESUME } from '../../../shared/constants/routes';
 import Button from '../../shared/Button';
 
 let lastCurrentHeight = 0;
@@ -64,8 +64,16 @@ const Navigation = () => {
                 <label className={NAV_NAME_CLASS}>Caden Cunningham</label>
 
                 <div className="nav__button-container">
-                    <Button text={'Resume'} />
-                    <Button text={'Contact Me'} />
+                    <Button 
+                        text={ROUTES_RESUME.text} 
+                        selected={location.pathname===ROUTES_RESUME.path}  
+                        onClickHandler={()=>handleNavClick(ROUTES_RESUME.path)}
+                    />
+                    <Button
+                        text={ROUTES_CONTACT_ME.text} 
+                        selected={location.pathname===ROUTES_CONTACT_ME.path}  
+                        onClickHandler={()=>handleNavClick(ROUTES_CONTACT_ME.path)}
+                    />
                 </div>
             </div>
         </nav>

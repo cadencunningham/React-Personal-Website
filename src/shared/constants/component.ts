@@ -35,9 +35,11 @@ export const features: IListElement[] = [
     },
     {
         label: 'Create nav functionality for pages',
+        completed: true
     },
     {
-        label: 'Create resources page',
+        label: 'Create Extras page',
+        completed: true
     },
     {
         label: 'Attach resume to resume page',
@@ -57,6 +59,10 @@ export const features: IListElement[] = [
     },
     {
         label: 'Color pickers for changing theme colors as user',
+        completed: true,
+    },
+    {
+        label: 'Add ability to save color choices to LS',
         active: true,
     },
     {
@@ -64,7 +70,7 @@ export const features: IListElement[] = [
     },
     {
         label: 'Link to youtube channel',
-        active: true,
+        completed: true,
     },
     {
         label: 'BUG - Name not centered',
@@ -72,9 +78,11 @@ export const features: IListElement[] = [
     },
     {
         label: 'BUG - Color pickers dont work in IE',
-        active: true,
     },
     {
         label: 'Add custom website domain',
+    },
+    {
+        label: 'Fix weird navbar defect (ripple)',
     },
 ];

@@ -4,7 +4,7 @@ import Card from '../shared/Card';
 import TableList from '../shared/TableList';
 import YoutubeChannel from './YoutubeChannel';
 
-const Home = () => {
+const HomePage = () => {
     return (
         <div className="home">
             <Card header="Upcoming Feature List">
@@ -15,4 +15,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomePage;

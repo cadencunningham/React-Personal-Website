@@ -1,7 +1,7 @@
 import React from 'react';
 import ColorThemerSaver from './ColorThemerSaver';
 
-const Extras = () => {
+const ExtrasPage = () => {
     return(
         <div className='extras'>
             <ColorThemerSaver/>
@@ -9,4 +9,4 @@ const Extras = () => {
     )
 }
 
-export default Extras;
+export default ExtrasPage;
