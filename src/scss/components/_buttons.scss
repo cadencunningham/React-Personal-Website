@@ -1,30 +1,21 @@
+
 .button {
     position: relative;
     padding: 1.5rem 2rem;
-    background-color: transparent;
     border: none;
     border-radius: 8px;
     outline: none;
     cursor: pointer;
     transition: 0.4s all;
-    color: scssColorCreator(--color-tertiary-light);
     box-shadow: none;
     transform: translateY(0);
     overflow: hidden;
-
-    &--selected,
-    &:hover,
-    &:active {
-        color: scssColorCreator(--color-primary-light);
-        box-shadow: scssColorCreator(--shadow-light);
-    }
 
     &:active {
         transform: translateY(3px);
     }
 
     &__ripple-root {
-        background-color: transparent;
         height: 0%;
         width: 0%;
 
@@ -38,7 +29,48 @@
             transform: scale(0);
             animation: ripple 0.6s linear;
             opacity: 0.3;
+        }
+    }
+    
+}
+
+.button_primary{
+    background-color: transparent;
+    color: scssColorCreator(--color-tertiary-light);
+
+    &--selected,
+    &:hover,
+    &:active {
+        color: scssColorCreator(--color-primary-light);
+        box-shadow: scssColorCreator(--shadow-light);
+    }
+
+    &__ripple-root {
+        background-color: transparent;
+
+        &__animation {
             background-color: scssColorCreator(--color-primary-light);
+        }
+    }
+}
+
+.button_secondary{
+    background-color: scssColorCreator(--color-tertiary-light);
+    color: scssColorCreator(--color-secondary);
+
+    &--selected,
+    &:hover,
+    &:active {
+        color: scssColorCreator(--color-secondary);
+        background-color: scssColorCreator(--color-primary-light);
+        box-shadow: scssColorCreator(--shadow-light);
+    }
+
+    &__ripple-root {
+        background-color: transparent;
+
+        &__animation {
+            background-color: red;
         }
     }
 }

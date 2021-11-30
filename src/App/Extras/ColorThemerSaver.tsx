@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../shared/Button';
+import Button, { EButtonColor } from '../shared/Button';
 import ColorThemer from '../shared/ColorThemer';
 
 const ColorThemerSaver = () => {
@@ -26,6 +26,7 @@ const ColorThemerSaver = () => {
                     btnClassName='color-themer-saver__save-btn'
                     text={'Save'}
                     onClickHandler={customColorSaveHandler}
+                    btnColor={EButtonColor.SECONDARY}
                 />
                 <Button 
                     text={'Cancel'}
