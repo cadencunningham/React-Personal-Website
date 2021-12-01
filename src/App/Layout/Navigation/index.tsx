@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useLocation } from "react-router-dom";
+import { useHistory, useLocation } from 'react-router-dom';
 import { ROUTES_CONTACT_ME, ROUTES_EXTRAS, ROUTES_HOME, ROUTES_RESUME } from '../../../shared/constants/routes';
 import Button from '../../shared/Button';
 
@@ -8,13 +8,13 @@ const NAV_COLLAPSE_CLASS = 'nav__collapse';
 const NAV_NAME_CLASS = 'nav-name';
 
 const Navigation = () => {
-    let history = useHistory();
+    const history = useHistory();
     const location = useLocation();
     const [navExpandClass, setNavExpandClass] = useState('');
 
-    function handleNavClick(route:string) {
+    function handleNavClick(route: string) {
         history.push(route);
-      }
+    }
 
     useEffect(() => {
         document.addEventListener('scroll', () => {
@@ -49,30 +49,30 @@ const Navigation = () => {
         <nav className={['nav', navExpandClass].join(' ')}>
             <div className="nav__container">
                 <div className="nav__button-container">
-                    <Button 
-                        text={ROUTES_HOME.text} 
-                        selected={location.pathname===ROUTES_HOME.path} 
-                        onClickHandler={()=>handleNavClick(ROUTES_HOME.path)}
+                    <Button
+                        text={ROUTES_HOME.text}
+                        selected={location.pathname === ROUTES_HOME.path}
+                        onClickHandler={() => handleNavClick(ROUTES_HOME.path)}
                     />
-                    <Button 
+                    <Button
                         text={ROUTES_EXTRAS.text}
-                        selected={location.pathname===ROUTES_EXTRAS.path}  
-                        onClickHandler={()=>handleNavClick(ROUTES_EXTRAS.path)}
+                        selected={location.pathname === ROUTES_EXTRAS.path}
+                        onClickHandler={() => handleNavClick(ROUTES_EXTRAS.path)}
                     />
                 </div>
 
                 <label className={NAV_NAME_CLASS}>Caden Cunningham</label>
 
                 <div className="nav__button-container">
-                    <Button 
-                        text={ROUTES_RESUME.text} 
-                        selected={location.pathname===ROUTES_RESUME.path}  
-                        onClickHandler={()=>handleNavClick(ROUTES_RESUME.path)}
+                    <Button
+                        text={ROUTES_RESUME.text}
+                        selected={location.pathname === ROUTES_RESUME.path}
+                        onClickHandler={() => handleNavClick(ROUTES_RESUME.path)}
                     />
                     <Button
-                        text={ROUTES_CONTACT_ME.text} 
-                        selected={location.pathname===ROUTES_CONTACT_ME.path}  
-                        onClickHandler={()=>handleNavClick(ROUTES_CONTACT_ME.path)}
+                        text={ROUTES_CONTACT_ME.text}
+                        selected={location.pathname === ROUTES_CONTACT_ME.path}
+                        onClickHandler={() => handleNavClick(ROUTES_CONTACT_ME.path)}
                     />
                 </div>
             </div>

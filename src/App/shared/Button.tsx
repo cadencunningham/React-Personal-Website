@@ -1,14 +1,14 @@
 import React from 'react';
 
-export enum EButtonColor{
+export enum EButtonColor {
     PRIMARY = 'primary',
-    SECONDARY = 'secondary'
+    SECONDARY = 'secondary',
 }
 
 interface IProps {
     text: string;
     btnClassName?: string;
-    btnColor?:EButtonColor;
+    btnColor?: EButtonColor;
     onClickHandler?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     disableRipple?: boolean;
     selected?: boolean;
@@ -16,7 +16,7 @@ interface IProps {
 
 const Button = (props: IProps) => {
     const { text, disableRipple, onClickHandler, selected, btnClassName, btnColor } = props;
-    
+
     const addRipple = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         if (!disableRipple) {
             const button = event.currentTarget;
@@ -49,18 +49,16 @@ const Button = (props: IProps) => {
     return (
         <button
             onMouseDown={addRipple}
-            className={
-                [
-                    'button', 
-                    'button_' + (btnColor || EButtonColor.PRIMARY),
-                    selected ? 'button_' + (btnColor || EButtonColor.PRIMARY) + '--selected' : '', 
-                    btnClassName? btnClassName: ''
-                ].join(' ')
-            }
+            className={[
+                'button',
+                'button_' + (btnColor || EButtonColor.PRIMARY),
+                selected ? 'button_' + (btnColor || EButtonColor.PRIMARY) + '--selected' : '',
+                btnClassName ? btnClassName : '',
+            ].join(' ')}
             onClick={onClick}
         >
             {text}
-            <span className={"button__ripple-root button_"+ (btnColor || EButtonColor.PRIMARY) + "__ripple-root"} />
+            <span className={'button__ripple-root button_' + (btnColor || EButtonColor.PRIMARY) + '__ripple-root'} />
         </button>
     );
 };

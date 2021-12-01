@@ -7,15 +7,13 @@ import ExtrasPage from './ExtrasPage';
 import { ROUTES_CONTACT_ME, ROUTES_EXTRAS, ROUTES_HOME, ROUTES_RESUME } from '../shared/constants/routes';
 import ResumePage from './ResumePage';
 import ContactMePage from './ContactMePage';
-import {restoreCssThemeFromLs} from '../shared/utils/colorThemeHelpers';
-
+import { restoreCssThemeFromLs } from '../shared/utils/colorThemeHelpers';
 
 // https://www.awwwards.com/sites/veille-reputation-squad
 const App = () => {
-
-    useEffect(()=>{
-        restoreCssThemeFromLs()
-    },[])
+    useEffect(() => {
+        restoreCssThemeFromLs();
+    }, []);
 
     return (
         <Router>

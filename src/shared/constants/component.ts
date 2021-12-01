@@ -35,11 +35,11 @@ export const features: IListElement[] = [
     },
     {
         label: 'Create nav functionality for pages',
-        completed: true
+        completed: true,
     },
     {
         label: 'Create Extras page',
-        completed: true
+        completed: true,
     },
     {
         label: 'Attach resume to resume page',

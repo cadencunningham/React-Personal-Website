@@ -12,23 +12,23 @@ export const VAR_COLOR_TERTIARY_DARK = '--color-tertiary-dark';
 
 export const DEFAULT_COLOR_THEME_PICKERS_STATE = {
     [VAR_COLOR_PRIMARY_LIGHT]: {
-        title: "Primary Color - Light",
-        rgb: DEFAULT_COLOR_PRIMARY_LIGHT
+        title: 'Primary Color - Light',
+        rgb: DEFAULT_COLOR_PRIMARY_LIGHT,
     },
     [VAR_COLOR_PRIMARY_DARK]: {
-        title:"Primary Color - Dark",
-        rgb:DEFAULT_COLOR_PRIMARY_DARK
+        title: 'Primary Color - Dark',
+        rgb: DEFAULT_COLOR_PRIMARY_DARK,
     },
     [VAR_COLOR_SECONDARY]: {
-        title: "Secondary Color",
-        rgb: DEFAULT_COLOR_SECONDARY
+        title: 'Secondary Color',
+        rgb: DEFAULT_COLOR_SECONDARY,
     },
     [VAR_COLOR_TERTIARY_LIGHT]: {
-        title: "Tertiary Color - Light",
-        rgb: DEFAULT_COLOR_TERTIARY_LIGHT
+        title: 'Tertiary Color - Light',
+        rgb: DEFAULT_COLOR_TERTIARY_LIGHT,
     },
     [VAR_COLOR_TERTIARY_DARK]: {
-        title:"Tertiary Color - Dark",
-        rgb:DEFAULT_COLOR_TERTIARY_DARK
-    }
-}
+        title: 'Tertiary Color - Dark',
+        rgb: DEFAULT_COLOR_TERTIARY_DARK,
+    },
+};

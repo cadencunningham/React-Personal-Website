@@ -15,16 +15,14 @@
     }
 }
 
-.color-themer-saver{
-
-    &__btn-cntr{
+.color-themer-saver {
+    &__btn-cntr {
         display: flex;
         justify-content: space-between;
         margin-top: 1rem;
     }
 
-    &__mr-btn{
+    &__mr-btn {
         margin-right: 1rem;
     }
-
 }

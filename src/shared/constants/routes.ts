@@ -1,19 +1,18 @@
 export const ROUTES_HOME = {
     text: 'Home',
-    path: '/'
+    path: '/',
 };
 export const ROUTES_EXTRAS = {
     text: 'Extras',
-    path:'/extras'
+    path: '/extras',
 };
 
 export const ROUTES_RESUME = {
     text: 'Resume',
-    path:'/resume'
+    path: '/resume',
 };
 
 export const ROUTES_CONTACT_ME = {
     text: 'Contact Me',
-    path:'/contact_me'
+    path: '/contact_me',
 };
-

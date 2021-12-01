@@ -1,72 +1,68 @@
 import React, { useState } from 'react';
 import { RGBColor } from 'react-color';
 import { DEFAULT_COLOR_THEME_PICKERS_STATE } from '../../shared/constants/theme';
-import { cssColorThemeSetter, getColorThemeFromLs, setColorThemeLs } from '../../shared/utils/colorThemeHelpers';
+import {
+    cssColorThemeSetter,
+    getColorThemeFromLs,
+    restoreCssThemeFromLs,
+    setColorThemeLs,
+} from '../../shared/utils/colorThemeHelpers';
 import Button, { EButtonColor } from '../shared/Button';
 import ColorThemer from '../shared/ColorThemer';
 
 const ColorThemerSaver = () => {
     const [pageColorTheme, setPageColorTheme] = useState(getColorThemeFromLs());
 
-
     const customColorSaveHandler = () => {
         setColorThemeLs(pageColorTheme);
-    }
+    };
 
     const customColorCancelHandler = () => {
-        try{}catch{}
-        //going to need a validator function
-        //need try catch for trying to reset since we may not be able to reference the local storage
-        // util function for setting default colors so that can referenced here and in the base file for pulling ls data
-    }
+        setPageColorTheme(() => {
+            restoreCssThemeFromLs();
+            return DEFAULT_COLOR_THEME_PICKERS_STATE;
+        });
+    };
 
     const customColorRestoreDefaultHandler = () => {
-        setPageColorTheme(()=>{
-            cssColorThemeSetter(DEFAULT_COLOR_THEME_PICKERS_STATE)
-            return DEFAULT_COLOR_THEME_PICKERS_STATE
-        })
-    }
+        setPageColorTheme(() => {
+            cssColorThemeSetter(DEFAULT_COLOR_THEME_PICKERS_STATE);
+            return DEFAULT_COLOR_THEME_PICKERS_STATE;
+        });
+    };
 
     const onColorChangeHandler = (color: RGBColor, varString: string) => {
-        setPageColorTheme(prevState => (
-            {
-                ...prevState,
-                [varString]:{
-                    ...Object(prevState)[varString],
-                    rgb:color
-                }
-            }
-        ))
-    }
+        setPageColorTheme((prevState) => ({
+            ...prevState,
+            [varString]: {
+                ...Object(prevState)[varString],
+                rgb: color,
+            },
+        }));
+    };
 
     return (
-        <div className='color-themer-saver'>
-            <ColorThemer
-                colorThemeState={pageColorTheme}
-                onColorChangeHandler={onColorChangeHandler}
-            />
-            <div className='color-themer-saver__btn-cntr'>
-                <Button 
-                    btnClassName='color-themer-save__mr-btn'
+        <div className="color-themer-saver">
+            <ColorThemer colorThemeState={pageColorTheme} onColorChangeHandler={onColorChangeHandler} />
+            <div className="color-themer-saver__btn-cntr">
+                <Button
+                    btnClassName="color-themer-save__mr-btn"
                     text={'Restore Default'}
                     onClickHandler={customColorRestoreDefaultHandler}
                     btnColor={EButtonColor.SECONDARY}
                 />
                 <div>
-                    <Button 
-                        btnClassName='color-themer-saver__mr-btn'
+                    <Button
+                        btnClassName="color-themer-saver__mr-btn"
                         text={'Save'}
                         onClickHandler={customColorSaveHandler}
                         btnColor={EButtonColor.SECONDARY}
                     />
-                    <Button 
-                        text={'Cancel'}
-                        onClickHandler={customColorCancelHandler}
-                    />
+                    <Button text={'Cancel'} onClickHandler={customColorCancelHandler} />
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ColorThemerSaver;
