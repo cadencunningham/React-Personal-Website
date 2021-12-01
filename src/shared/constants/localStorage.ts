@@ -1,0 +1,2 @@
+
+export const PAGE_THEME_COLORS = 'PAGE_THEME_COLORS';

@@ -19,11 +19,11 @@
 
     &__btn-cntr{
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         margin-top: 1rem;
     }
 
-    &__save-btn{
+    &__mr-btn{
         margin-right: 1rem;
     }
 

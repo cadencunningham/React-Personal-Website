@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Layout from './Layout';
 import '../scss/main.scss';
@@ -7,10 +7,16 @@ import ExtrasPage from './ExtrasPage';
 import { ROUTES_CONTACT_ME, ROUTES_EXTRAS, ROUTES_HOME, ROUTES_RESUME } from '../shared/constants/routes';
 import ResumePage from './ResumePage';
 import ContactMePage from './ContactMePage';
+import {restoreCssThemeFromLs} from '../shared/utils/colorThemeHelpers';
 
 
 // https://www.awwwards.com/sites/veille-reputation-squad
 const App = () => {
+
+    useEffect(()=>{
+        restoreCssThemeFromLs()
+    },[])
+
     return (
         <Router>
             <Layout>

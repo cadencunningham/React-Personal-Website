@@ -85,4 +85,7 @@ export const features: IListElement[] = [
     {
         label: 'Fix weird navbar defect (ripple)',
     },
+    {
+        label: 'Limit header circles to homepage?',
+    },
 ];

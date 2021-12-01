@@ -1,37 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { RGBColor } from 'react-color';
+import { DEFAULT_COLOR_THEME_PICKERS_STATE } from '../../shared/constants/theme';
+import { cssColorThemeSetter, getColorThemeFromLs, setColorThemeLs } from '../../shared/utils/colorThemeHelpers';
 import Button, { EButtonColor } from '../shared/Button';
 import ColorThemer from '../shared/ColorThemer';
 
 const ColorThemerSaver = () => {
+    const [pageColorTheme, setPageColorTheme] = useState(getColorThemeFromLs());
+
 
     const customColorSaveHandler = () => {
-        //add ls setter logic
+        setColorThemeLs(pageColorTheme);
     }
+
     const customColorCancelHandler = () => {
         try{}catch{}
+        //going to need a validator function
         //need try catch for trying to reset since we may not be able to reference the local storage
         // util function for setting default colors so that can referenced here and in the base file for pulling ls data
     }
 
-    //add custom color classes - primary / secondary / etc. Will need class enum rep
-    // add functionality for the save and cancel feature
+    const customColorRestoreDefaultHandler = () => {
+        setPageColorTheme(()=>{
+            cssColorThemeSetter(DEFAULT_COLOR_THEME_PICKERS_STATE)
+            return DEFAULT_COLOR_THEME_PICKERS_STATE
+        })
+    }
 
-    //look into setting the name scroll part for only the home page
+    const onColorChangeHandler = (color: RGBColor, varString: string) => {
+        setPageColorTheme(prevState => (
+            {
+                ...prevState,
+                [varString]:{
+                    ...Object(prevState)[varString],
+                    rgb:color
+                }
+            }
+        ))
+    }
 
     return (
         <div className='color-themer-saver'>
-            <ColorThemer/>
+            <ColorThemer
+                colorThemeState={pageColorTheme}
+                onColorChangeHandler={onColorChangeHandler}
+            />
             <div className='color-themer-saver__btn-cntr'>
                 <Button 
-                    btnClassName='color-themer-saver__save-btn'
-                    text={'Save'}
-                    onClickHandler={customColorSaveHandler}
+                    btnClassName='color-themer-save__mr-btn'
+                    text={'Restore Default'}
+                    onClickHandler={customColorRestoreDefaultHandler}
                     btnColor={EButtonColor.SECONDARY}
                 />
-                <Button 
-                    text={'Cancel'}
-                    onClickHandler={customColorCancelHandler}
-                />
+                <div>
+                    <Button 
+                        btnClassName='color-themer-saver__mr-btn'
+                        text={'Save'}
+                        onClickHandler={customColorSaveHandler}
+                        btnColor={EButtonColor.SECONDARY}
+                    />
+                    <Button 
+                        text={'Cancel'}
+                        onClickHandler={customColorCancelHandler}
+                    />
+                </div>
             </div>
         </div>
     )
