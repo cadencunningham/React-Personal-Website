@@ -63,7 +63,7 @@ export const features: IListElement[] = [
     },
     {
         label: 'Add ability to save color choices to LS',
-        active: true,
+        completed: true,
     },
     {
         label: 'Create jira board',

@@ -88,6 +88,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dart-sass": "^1.25.0",
+    "postcss": "^8.4.4",
     "react": "^16.14.0",
     "react-app-polyfill": "^2.0.0",
     "react-color": "^2.19.3",
