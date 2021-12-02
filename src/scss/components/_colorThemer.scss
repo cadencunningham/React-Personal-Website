@@ -1,0 +1,13 @@
+.color-themer {
+    &__pickers {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+        @media screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 2rem;
+        }
+    }
+}

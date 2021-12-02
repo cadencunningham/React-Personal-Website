@@ -13,16 +13,18 @@
         grid-row-gap: 2rem;
         padding: 0 5rem 5rem 5rem;
     }
-}
 
-.color-themer-saver {
-    &__btn-cntr {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1rem;
+    &__color-themer-saver {
+        &__btn-cntr {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+    
+        &__mr-btn {
+            margin-right: 1rem;
+        }
     }
+    
 
-    &__mr-btn {
-        margin-right: 1rem;
-    }
 }
