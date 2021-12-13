@@ -10,6 +10,10 @@ export const features: IListElement[] = [
         active: true,
     },
     {
+        label: 'Add hamburger menu for mobile',
+        active: true,
+    },
+    {
         label: 'Add technologies to home page',
     },
     {

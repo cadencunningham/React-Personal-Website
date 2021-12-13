@@ -46,7 +46,7 @@ const Navigation = () => {
     }, []);
 
     return (
-        <nav className={['nav', navExpandClass].join(' ')}>
+        <nav className={['nav', navExpandClass || ''].join(' ')}>
             <div className="nav__container">
                 <div className="nav__button-container">
                     <Button

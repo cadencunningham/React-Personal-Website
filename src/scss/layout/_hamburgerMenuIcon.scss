@@ -1,0 +1,46 @@
+.hamburger_menu_icon{
+
+    @media screen and (min-width: $bp-smaller) {
+        display: none;
+    }
+
+    margin-top: 2rem;
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 25%;
+    cursor: pointer;
+
+    & a, a::after, a::before {
+        top: calc(50% - .75rem);
+        left: 2rem;
+        width: 8rem;
+        height: 1rem;
+
+        background: scssColorCreator(--color-tertiary-light);
+        position: absolute;
+        box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+        transition: 0.5s;
+        border-radius: 15%;
+    }
+
+    & a::before {
+        content: '';
+        top: -3.5rem;
+        left: 0;
+        border-top-left-radius: 25%;
+        border-top-right-radius: 25%;
+    }
+
+    & a::after {
+        content: '';
+        top: 3.5rem;
+        left: 0;
+        border-bottom-left-radius: 25%;
+        border-bottom-right-radius: 25%;
+    }
+
+
+}
