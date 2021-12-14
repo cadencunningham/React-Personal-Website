@@ -27,6 +27,6 @@
     "include": [
       "**/*.ts",
       "**/*.tsx"
-    ],
+, "src/App/Layout/SideDrawerNav"    ],
     "exclude": ["node_modules"]
   }

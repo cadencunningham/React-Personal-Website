@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
 import { ROUTES_CONTACT_ME, ROUTES_EXTRAS, ROUTES_HOME, ROUTES_RESUME } from '../../../shared/constants/routes';
 import Button from '../../shared/Button';
 
@@ -7,14 +6,14 @@ let lastCurrentHeight = 0;
 const NAV_COLLAPSE_CLASS = 'nav__collapse';
 const NAV_NAME_CLASS = 'nav-name';
 
-const Navigation = () => {
-    const history = useHistory();
-    const location = useLocation();
-    const [navExpandClass, setNavExpandClass] = useState('');
+interface IProps {
+    currentPath: string;
+    handleNavChange: (route: string) => void;
+}
 
-    function handleNavClick(route: string) {
-        history.push(route);
-    }
+const Navigation = (props: IProps) => {
+    const { currentPath, handleNavChange } = props;
+    const [navExpandClass, setNavExpandClass] = useState('');
 
     useEffect(() => {
         document.addEventListener('scroll', () => {
@@ -46,18 +45,18 @@ const Navigation = () => {
     }, []);
 
     return (
-        <nav className={['nav', navExpandClass].join(' ')}>
+        <nav className={['nav', navExpandClass || ''].join(' ')}>
             <div className="nav__container">
                 <div className="nav__button-container">
                     <Button
                         text={ROUTES_HOME.text}
-                        selected={location.pathname === ROUTES_HOME.path}
-                        onClickHandler={() => handleNavClick(ROUTES_HOME.path)}
+                        selected={currentPath === ROUTES_HOME.path}
+                        onClickHandler={() => handleNavChange(ROUTES_HOME.path)}
                     />
                     <Button
                         text={ROUTES_EXTRAS.text}
-                        selected={location.pathname === ROUTES_EXTRAS.path}
-                        onClickHandler={() => handleNavClick(ROUTES_EXTRAS.path)}
+                        selected={currentPath === ROUTES_EXTRAS.path}
+                        onClickHandler={() => handleNavChange(ROUTES_EXTRAS.path)}
                     />
                 </div>
 
@@ -66,13 +65,13 @@ const Navigation = () => {
                 <div className="nav__button-container">
                     <Button
                         text={ROUTES_RESUME.text}
-                        selected={location.pathname === ROUTES_RESUME.path}
-                        onClickHandler={() => handleNavClick(ROUTES_RESUME.path)}
+                        selected={currentPath === ROUTES_RESUME.path}
+                        onClickHandler={() => handleNavChange(ROUTES_RESUME.path)}
                     />
                     <Button
                         text={ROUTES_CONTACT_ME.text}
-                        selected={location.pathname === ROUTES_CONTACT_ME.path}
-                        onClickHandler={() => handleNavClick(ROUTES_CONTACT_ME.path)}
+                        selected={currentPath === ROUTES_CONTACT_ME.path}
+                        onClickHandler={() => handleNavChange(ROUTES_CONTACT_ME.path)}
                     />
                 </div>
             </div>

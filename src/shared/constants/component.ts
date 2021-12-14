@@ -37,6 +37,10 @@ export const features: IListElement[] = [
         label: 'Limit header circles to homepage?',
     },
     {
+        label: 'Add hamburger menu for mobile',
+        completed: true,
+    },
+    {
         label: 'Create base project',
         completed: true,
     },
