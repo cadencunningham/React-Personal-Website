@@ -1,0 +1,31 @@
+.side_drawer_nav {
+    background-color: scssColorCreator(--color-tertiary-light);
+    padding: 3rem 2rem 3rem 2rem;
+    border-right: scssColorCreator(--color-primary-light) 1rem solid;
+
+    &--nav_element {
+        cursor: pointer;
+        width: 100%;
+        min-width: max-content;
+        min-height: 15rem;
+        height: fit-content;
+        font-size: 8rem;
+        padding: 1rem 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: scssColorCreator(--color-tertiary-light);
+    }
+
+    &--nav_text {
+        color: scssColorCreator(--color-secondary);
+        outline: none;
+        overflow: hidden;
+    }
+
+    &--closed_drawer {
+        padding: 3rem 0rem 3rem 0rem;
+        border-right: 0;
+    }
+}

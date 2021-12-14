@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import Footer from './Footer';
-import HamburgerMenuIcon from './Navigation/HamburgerMenuIcon';
 import Header from './Header';
 import Navigation from './Navigation';
-import Backdrop from '../shared/Backdrop';
-
+import SideDrawerNav from './SideDrawerNav';
 
 interface IProps {
     children: JSX.Element;
@@ -12,23 +11,22 @@ interface IProps {
 
 const Layout = (props: IProps) => {
     const { children } = props;
+    const history = useHistory();
+    const location = useLocation();
 
-    const [sideDrawerOpened, setSideDrawerOpened] = useState(false)
-
-    const toggleSideDrawer = () => {
-        setSideDrawerOpened(prevState=>!prevState)
-    }
+    const handleNavChange = (route: string) => {
+        history.push(route);
+    };
 
     return (
         <>
-        <div className="layout">
-            <Header />
-            <Navigation />
-            {children}
-            <Footer />
-            <HamburgerMenuIcon onClick={toggleSideDrawer}/>
-            {sideDrawerOpened && <Backdrop onClick={toggleSideDrawer}/>}
-        </div>
+            <div className="layout">
+                <Header />
+                <Navigation currentPath={location.pathname} handleNavChange={handleNavChange} />
+                {children}
+                <Footer />
+                <SideDrawerNav currentPath={location.pathname} handleNavChange={handleNavChange} />
+            </div>
         </>
     );
 };

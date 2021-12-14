@@ -1,0 +1,6 @@
+.side_drawer {
+    position: fixed;
+    max-height: 100vh;
+    overflow: hidden;
+    transition: width 0.2s ease-out;
+}

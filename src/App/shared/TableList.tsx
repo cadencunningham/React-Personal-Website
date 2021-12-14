@@ -15,7 +15,7 @@ const TableList = (props: IProps) => {
     return (
         <div className={!noContainerClass ? 'table-list' : ''}>
             {header && <h2 className={headerClassName || 'table-list__header'}>{header}</h2>}
-            <ul className={["table-list__list", tableListClassName??''].join(' ')}>
+            <ul className={['table-list__list', tableListClassName ?? ''].join(' ')}>
                 {list.map((element) => (
                     <li
                         key={element.label}

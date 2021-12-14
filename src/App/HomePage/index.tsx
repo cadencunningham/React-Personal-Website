@@ -8,7 +8,7 @@ const HomePage = () => {
     return (
         <div className="home">
             <Card header="Upcoming Feature List">
-                <TableList list={features} tableListClassName='home__feature-list'/>
+                <TableList list={features} tableListClassName="home__feature-list" />
             </Card>
             <YoutubeChannel />
         </div>

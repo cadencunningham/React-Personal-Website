@@ -1,16 +1,13 @@
 import React from 'react';
 
-interface IProps{
+interface IProps {
     onClick?: React.MouseEventHandler<HTMLDivElement> | undefined;
 }
 
-const Backdrop = (props:IProps) => {
-    const {onClick} = props;
+const Backdrop = (props: IProps) => {
+    const { onClick } = props;
 
-    return(
-        <div className='backdrop' onClick={onClick}/>
-    )
-
-}
+    return <div className="backdrop" onClick={onClick} />;
+};
 
 export default Backdrop;
