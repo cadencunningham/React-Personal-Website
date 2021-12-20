@@ -4,7 +4,7 @@
         place-items: center;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
-        @media screen and (max-width: $bp-medium) {
+        @include tablet {
             grid-template-columns: 1fr;
             grid-column-gap: 0;
             grid-row-gap: 2rem;

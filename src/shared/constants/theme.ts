@@ -1,8 +1,8 @@
-export const DEFAULT_COLOR_PRIMARY_LIGHT = { r: 134, g: 194, b: 50 };
-export const DEFAULT_COLOR_PRIMARY_DARK = { r: 97, g: 137, b: 47 };
-export const DEFAULT_COLOR_SECONDARY = { r: 37, g: 38, b: 41 };
-export const DEFAULT_COLOR_TERTIARY_LIGHT = { r: 107, g: 110, b: 112 };
-export const DEFAULT_COLOR_TERTIARY_DARK = { r: 71, g: 75, b: 79 };
+export const DEFAULT_COLOR_PRIMARY_LIGHT = { r: 191, g: 189, b: 96 };
+export const DEFAULT_COLOR_PRIMARY_DARK = { r: 207, g: 203, b: 19 };
+export const DEFAULT_COLOR_SECONDARY = { r: 4, g: 4, b: 4 };
+export const DEFAULT_COLOR_TERTIARY_LIGHT = { r: 201, g: 205, b: 209 };
+export const DEFAULT_COLOR_TERTIARY_DARK = { r: 55, g: 56, b: 58 };
 
 export const VAR_COLOR_PRIMARY_LIGHT = '--color-primary-light';
 export const VAR_COLOR_PRIMARY_DARK = '--color-primary-dark';

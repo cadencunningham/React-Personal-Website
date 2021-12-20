@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+import { ROUTES_HOME } from '../../shared/constants/routes';
 import Footer from './Footer';
 import Header from './Header';
 import Navigation from './Navigation';
@@ -21,7 +22,7 @@ const Layout = (props: IProps) => {
     return (
         <>
             <div className="layout">
-                <Header />
+                {location.pathname === ROUTES_HOME.path && <Header />}
                 <Navigation currentPath={location.pathname} handleNavChange={handleNavChange} />
                 {children}
                 <Footer />

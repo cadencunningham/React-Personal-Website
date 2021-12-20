@@ -3,7 +3,7 @@ import ColorThemerSaver from './ColorThemerSaver';
 
 const ExtrasPage = () => {
     return (
-        <div className="extras">
+        <div className="extras gen__non_home_page">
             <ColorThemerSaver />
         </div>
     );

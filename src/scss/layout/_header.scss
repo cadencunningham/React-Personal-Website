@@ -2,8 +2,14 @@
     background-color: scssColorCreator(--color-secondary);
     color: scssColorCreator(--color-primary-light);
     position: relative;
-    min-height: 100vh;
     max-width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+
+    @include mobile-safari{
+        height:calc(100vh - 120px);
+        min-height: calc(100vh - 120px);    
+    }
 
     &__background-container {
         position: relative;
@@ -52,7 +58,7 @@
             background: radial-gradient(transparent 60%, scssColorCreator(--color-tertiary-light));
         }
 
-        @media screen and (max-width: $bp-mini) {
+        @include micro-mobile {
             &--inner {
                 height: 50rem;
                 width: 50rem;

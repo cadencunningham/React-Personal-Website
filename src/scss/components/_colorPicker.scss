@@ -8,9 +8,13 @@
     }
 
     &__header {
-        margin-bottom: 2rem;
         font-size: 2rem;
+        margin-bottom: 2rem;
         color: scssColorCreator(--color-tertiary-light);
+
+        @include mobile-safari{
+            font-size: 4rem;
+        }
     }
 
     &__picker {

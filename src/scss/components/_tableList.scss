@@ -23,6 +23,11 @@
     &__element {
         padding: 0.5rem;
         font-size: 1.5rem;
+
+        @include mobile-safari{
+            font-size: 2.5rem;
+        }
+
         color: scssColorCreator(--color-tertiary-light);
 
         &--active {

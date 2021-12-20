@@ -4,18 +4,20 @@
     border-right: scssColorCreator(--color-primary-light) 1rem solid;
 
     &--nav_element {
+        font-size: 8rem;
         cursor: pointer;
         width: 100%;
         min-width: max-content;
-        min-height: 15rem;
         height: fit-content;
-        font-size: 8rem;
-        padding: 1rem 2rem;
-
+        padding: 1rem 0;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: scssColorCreator(--color-tertiary-light);
+
+        @include mobile-safari{
+            font-size: 5rem;
+        }
     }
 
     &--nav_text {
