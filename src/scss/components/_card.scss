@@ -14,7 +14,7 @@
         font-size: 4rem;
         margin-bottom: 1rem;
 
-        @include mobile-safari{
+        @include mobile-safari {
             font-size: 6rem;
         }
     }

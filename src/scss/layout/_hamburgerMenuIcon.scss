@@ -1,5 +1,4 @@
 .hamburger_menu_icon {
-
     @media screen and (min-width: $bp-smaller) {
         display: none;
     }
@@ -13,7 +12,7 @@
     left: 3rem;
     margin-top: 2rem;
 
-    @include mobile-safari{
+    @include mobile-safari {
         height: 5rem;
         width: 5rem;
         top: 1rem;
@@ -43,7 +42,7 @@
         border-top-left-radius: 25%;
         border-top-right-radius: 25%;
 
-        @include mobile-safari{
+        @include mobile-safari {
             top: -2rem;
         }
     }
@@ -55,7 +54,7 @@
         border-bottom-left-radius: 25%;
         border-bottom-right-radius: 25%;
 
-        @include mobile-safari{
+        @include mobile-safari {
             top: 2rem;
         }
     }

@@ -9,4 +9,11 @@
     display: grid;
     grid-template-rows: minmax(min-content, 100vh) 1fr minmax(min-content, 4rem);
     grid-auto-columns: 100%;
+
+    &__page-title {
+        width: 30%;
+        margin: auto;
+        margin-bottom: 4rem;
+        max-width: 30rem;
+    }
 }

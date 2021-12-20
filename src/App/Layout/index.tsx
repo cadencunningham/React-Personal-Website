@@ -23,8 +23,8 @@ const Layout = (props: IProps) => {
         <>
             <div className="layout">
                 {location.pathname === ROUTES_HOME.path && <Header />}
-                <Navigation currentPath={location.pathname} handleNavChange={handleNavChange} />
                 {children}
+                <Navigation currentPath={location.pathname} handleNavChange={handleNavChange} />
                 <Footer />
                 <SideDrawerNav currentPath={location.pathname} handleNavChange={handleNavChange} />
             </div>

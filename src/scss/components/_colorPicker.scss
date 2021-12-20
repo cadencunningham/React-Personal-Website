@@ -12,7 +12,7 @@
         margin-bottom: 2rem;
         color: scssColorCreator(--color-tertiary-light);
 
-        @include mobile-safari{
+        @include mobile-safari {
             font-size: 4rem;
         }
     }

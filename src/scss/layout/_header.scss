@@ -6,9 +6,9 @@
     height: 100vh;
     min-height: 100vh;
 
-    @include mobile-safari{
-        height:calc(100vh - 120px);
-        min-height: calc(100vh - 120px);    
+    @include mobile-safari {
+        height: calc(100vh - 120px);
+        min-height: calc(100vh - 120px);
     }
 
     &__background-container {
@@ -25,7 +25,6 @@
         &--inner,
         &--center-pulse,
         &--outer {
-            // z-index: 1;
             background-size: cover;
             border-radius: 100%;
             background-position: top left;
@@ -39,7 +38,6 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            // z-index: 0;
             transform: translate(-50%, -50%);
         }
 

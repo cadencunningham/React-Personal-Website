@@ -15,7 +15,7 @@
         align-items: center;
         background-color: scssColorCreator(--color-tertiary-light);
 
-        @include mobile-safari{
+        @include mobile-safari {
             font-size: 5rem;
         }
     }

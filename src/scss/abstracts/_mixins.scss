@@ -19,7 +19,6 @@
     }
 }
 
-
 @mixin desktop {
     @media screen and (max-width: $bp-large) {
         @content;
@@ -32,24 +31,24 @@
     }
 }
 
-@mixin mobile{
+@mixin mobile {
     @media screen and (max-width: $bp-smaller) {
         @content;
     }
 }
 
-@mixin micro-mobile{
+@mixin micro-mobile {
     @media screen and (max-width: $bp-mini) {
         @content;
     }
 }
 
-@mixin mobile-safari{
-    @media screen and (max-width: $bp-smaller) and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) {
+@mixin mobile-safari {
+    @media screen and (max-width: $bp-smaller) and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
         @content;
     }
 
-    @media screen and (max-width: $bp-mini) and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0){
+    @media screen and (max-width: $bp-mini) and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
         @content;
     }
 }
