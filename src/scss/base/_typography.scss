@@ -6,10 +6,6 @@
     position: relative;
     text-align: center;
 
-    @include mobile-safari {
-        margin-top: -60px;
-    }
-
     &::before {
         position: absolute;
         left: 0;

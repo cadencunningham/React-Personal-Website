@@ -24,7 +24,7 @@
         padding: 0.5rem;
         font-size: 1.5rem;
 
-        @include mobile-safari {
+        @include mobile {
             font-size: 2.5rem;
         }
 

@@ -42,13 +42,3 @@
         @content;
     }
 }
-
-@mixin mobile-safari {
-    @media screen and (max-width: $bp-smaller) and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
-        @content;
-    }
-
-    @media screen and (max-width: $bp-mini) and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
-        @content;
-    }
-}
