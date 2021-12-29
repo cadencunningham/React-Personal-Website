@@ -27,5 +27,9 @@
 
     &non_home_page {
         margin-top: 10rem;
+
+        @include mobile {
+            margin-top: 4rem;
+        }
     }
 }

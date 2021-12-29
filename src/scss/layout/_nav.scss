@@ -18,19 +18,13 @@
 
     &__collapse {
         transform: translate(0, -100%);
+        overflow: hidden;
     }
 
     &__button-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 5px;
-    }
-
-    @include mobile {
-        &__button-container {
-            display: none;
-        }
-        border-bottom: unset;
     }
 
     &-name {
@@ -47,5 +41,15 @@
                 display: none;
             }
         }
+    }
+
+    @include mobile {
+        &__button-container {
+            display: none;
+        }
+        &__container {
+            min-height: 3rem;
+        }
+        border-bottom: unset;
     }
 }

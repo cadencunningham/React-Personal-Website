@@ -30,7 +30,7 @@ const Navigation = (props: IProps) => {
         let style = `font-size:${newFontSize >= 4 && onHomePage ? newFontSize : 4}rem;`;
         style =
             style +
-            (newNameHeight >= 4.315 && onHomePage ? `top:calc(${newNameHeight}vh - ${isMobile?60:0}px)` : `transform:translateX(-50%);top:0;`);
+            (newNameHeight >= 4.315 && onHomePage ? `top:calc(${newNameHeight}vh - ${isMobile?60:0}px)` : `top:50%;`);
 
         document.getElementsByClassName(NAV_NAME_CLASS)[0].setAttribute('style', style);
         //End Nav Name
