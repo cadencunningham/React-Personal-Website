@@ -13,15 +13,15 @@
 html {
     font-size: 62.5%;
 
-    @media screen and (max-width: $bp-large) {
+    @include desktop {
         font-size: 55%;
     }
 
-    @media screen and (max-width: $bp-medium) {
+    @include tablet {
         font-size: 42.5%;
     }
 
-    @media screen and (max-width: $bp-smaller) {
+    @include mobile {
         font-size: 30%;
     }
 }

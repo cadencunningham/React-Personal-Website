@@ -2,12 +2,14 @@ import { IListElement } from '../interfaces/component';
 
 export const features: IListElement[] = [
     {
-        label: 'Make mobile friendly',
+        label: 'Attach resume to resume page',
         active: true,
     },
     {
-        label: 'Attach resume to resume page',
-        active: true,
+        label: 'Add profile to home page',
+    },
+    {
+        label: 'Add experience to home page',
     },
     {
         label: 'Add technologies to home page',
@@ -35,6 +37,10 @@ export const features: IListElement[] = [
     },
     {
         label: 'Limit header circles to homepage?',
+    },
+    {
+        label: 'Make mobile friendly',
+        completed: true,
     },
     {
         label: 'Add hamburger menu for mobile',

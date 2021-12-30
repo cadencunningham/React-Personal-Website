@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { ROUTES_CONTACT_ME, ROUTES_EXTRAS, ROUTES_HOME, ROUTES_RESUME } from '../../../shared/constants/routes';
 import Button from '../../shared/Button';
 
-let lastCurrentHeight = 0;
 const NAV_COLLAPSE_CLASS = 'nav__collapse';
 const NAV_NAME_CLASS = 'nav-name';
 
@@ -13,10 +12,13 @@ interface IProps {
 
 const Navigation = (props: IProps) => {
     const { currentPath, handleNavChange } = props;
-    const [navExpandClass, setNavExpandClass] = useState('');
+    const [navExpandObject, setNavExpandObject] = useState({
+        class: '',
+        lastCurrentHeight: 0,
+    });
 
-    useEffect(() => {
-        document.addEventListener('scroll', () => {
+    const headerTextHelper = (onHomePage: boolean) => {
+        setNavExpandObject((prev) => {
             //Start Nav Name
             const windowHeight = window.innerHeight / 2;
             const currentHeight = window.pageYOffset;
@@ -24,28 +26,56 @@ const Navigation = (props: IProps) => {
             const newFontSize = (heightDifference / windowHeight) * 8;
             const newNameHeight = (heightDifference / windowHeight) * 50;
 
-            let style = `font-size:${newFontSize >= 4 ? newFontSize : 4}rem;`;
-            style = style + (newNameHeight >= 4.315 ? `top:${newNameHeight}vh` : `transform:translateX(-50%);top:0;`);
+            //look to improve logic in the future
+            const isMobile = window.innerWidth < 800;
+
+            let style = `font-size:${newFontSize >= 4 && onHomePage ? newFontSize : 4}rem;`;
+            style =
+                style +
+                (newNameHeight >= 4.315 && onHomePage
+                    ? `top:calc(${newNameHeight}vh - ${isMobile ? 60 : 0}px)`
+                    : `top:50%;`);
 
             document.getElementsByClassName(NAV_NAME_CLASS)[0].setAttribute('style', style);
             //End Nav Name
 
-            if (heightDifference <= 0) {
-                if (currentHeight < lastCurrentHeight) {
-                    setNavExpandClass('');
-                } else {
-                    setNavExpandClass(NAV_COLLAPSE_CLASS);
+            if (currentHeight !== prev.lastCurrentHeight) {
+                if (heightDifference <= 0 || !onHomePage) {
+                    if (currentHeight < prev.lastCurrentHeight) {
+                        return {
+                            class: '',
+                            lastCurrentHeight: currentHeight,
+                        };
+                    } else {
+                        return {
+                            class: NAV_COLLAPSE_CLASS,
+                            lastCurrentHeight: currentHeight,
+                        };
+                    }
                 }
-            } else {
-                setNavExpandClass('');
+
+                return {
+                    class: '',
+                    lastCurrentHeight: currentHeight,
+                };
             }
 
-            lastCurrentHeight = currentHeight;
+            return prev;
         });
-    }, []);
+    };
+
+    useEffect(() => {
+        const onHomePage = currentPath === ROUTES_HOME.path;
+
+        document.addEventListener('scroll', () => {
+            headerTextHelper(onHomePage);
+        });
+
+        headerTextHelper(onHomePage);
+    }, [currentPath]);
 
     return (
-        <nav className={['nav', navExpandClass || ''].join(' ')}>
+        <nav className={['nav', navExpandObject.class || ''].join(' ')}>
             <div className="nav__container">
                 <div className="nav__button-container">
                     <Button
@@ -60,7 +90,7 @@ const Navigation = (props: IProps) => {
                     />
                 </div>
 
-                <label className={NAV_NAME_CLASS}>Caden Cunningham</label>
+                <label className={[NAV_NAME_CLASS, 'heading-fancy'].join(' ')}>Caden Cunningham</label>
 
                 <div className="nav__button-container">
                     <Button

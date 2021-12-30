@@ -1,7 +1,12 @@
 import React from 'react';
+import PageTitle from '../shared/PageTitle';
 
 const ResumePage = () => {
-    return <div>Placeholder for Resume Page</div>;
+    return (
+        <div className="gen__non_home_page">
+            <PageTitle>Resume</PageTitle>
+        </div>
+    );
 };
 
 export default ResumePage;

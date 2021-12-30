@@ -2,8 +2,7 @@
     color: scssColorCreator(--color-primary-light);
     position: fixed;
     width: 100%;
-    padding: 1rem 5px;
-    // z-index: 1;
+    padding: 1rem 0.5rem;
     transition: transform 0.2s;
     transform: translate(0, 0);
     background-color: scssColorCreator(--color-secondary);
@@ -19,6 +18,7 @@
 
     &__collapse {
         transform: translate(0, -100%);
+        overflow: hidden;
     }
 
     &__button-container {
@@ -27,58 +27,29 @@
         grid-column-gap: 5px;
     }
 
-    @media screen and (max-width: $bp-smaller) {
+    &-name {
+        position: absolute;
+        text-align: center;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+
+        @include tablet {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    @include mobile {
         &__button-container {
             display: none;
         }
-        border-bottom: unset;
-    }
-}
-
-.nav-name {
-    font-family: $font-primary;
-    font-size: 8rem;
-    text-transform: uppercase;
-    color: inherit;
-    text-align: center;
-
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-
-    &::before {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translate(-130%, -50%);
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-    }
-
-    &::after {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translate(130%, -50%);
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-
-    &::before,
-    &::after {
-        display: block;
-        content: '';
-        height: 0.15em;
-        width: 0.6em;
-        background-color: scssColorCreator(--color-primary-light);
-    }
-
-    //BUG WHERE THE NAME ISNT EXACTLY CENTERED
-    @media screen and (max-width: $bp-medium) {
-        &::before,
-        &::after {
-            display: none;
+        &__container {
+            min-height: 3rem;
         }
+        border-bottom: unset;
     }
 }
