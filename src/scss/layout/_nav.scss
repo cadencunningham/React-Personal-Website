@@ -2,7 +2,7 @@
     color: scssColorCreator(--color-primary-light);
     position: fixed;
     width: 100%;
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
     transition: transform 0.2s;
     transform: translate(0, 0);
     background-color: scssColorCreator(--color-secondary);
