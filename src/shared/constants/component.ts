@@ -2,8 +2,8 @@ import { IListElement } from '../interfaces/component';
 
 export const features: IListElement[] = [
     {
-        label: 'Attach resume to resume page',
-        active: true,
+        label: 'Add technologies to home page',
+        active: true
     },
     {
         label: 'Add profile to home page',
@@ -12,22 +12,13 @@ export const features: IListElement[] = [
         label: 'Add experience to home page',
     },
     {
-        label: 'Add technologies to home page',
-    },
-    {
-        label: 'Add functionality to download resume as pdf',
-    },
-    {
-        label: 'Create contact me page',
+        label: 'Create contact me page and form',
     },
     {
         label: 'Create contact me functionality',
     },
     {
         label: 'Create jira board',
-    },
-    {
-        label: 'BUG - Color pickers dont work in IE',
     },
     {
         label: 'Add custom website domain',
@@ -37,6 +28,11 @@ export const features: IListElement[] = [
     },
     {
         label: 'Limit header circles to homepage?',
+        completed: true,
+    },
+    {
+        label: 'Attach resume to resume page',
+        completed: true,
     },
     {
         label: 'Make mobile friendly',
