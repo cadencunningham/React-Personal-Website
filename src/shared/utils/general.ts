@@ -7,3 +7,7 @@ export const throttleFunc = (func: () => void, delay: number) => {
         }
     };
 };
+
+export const openLinkInNewTabHandler = (link: string) => {
+    window.open(link);
+};
