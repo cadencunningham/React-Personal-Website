@@ -5,6 +5,8 @@ import SideDrawer from '../../shared/SideDrawer';
 import HamburgerMenuIcon from './HamburgerMenuIcon';
 import SideDrawerNavElement from './SideDrawerNavElement';
 import * as ROUTES from '../../../shared/constants/routes';
+import { openLinkInNewTabHandler } from '../../../shared/utils/general';
+import { RESUME_INFO } from '../../../shared/constants/general';
 
 interface IProps {
     currentPath: string;
@@ -61,9 +63,9 @@ const SideDrawerNav = (props: IProps) => {
                     <SideDrawerNavElement>
                         <a
                             className="side_drawer_nav--nav_text"
-                            onClick={() => onNavElementClicked(ROUTES.ROUTES_RESUME.path)}
+                            onClick={() => openLinkInNewTabHandler(RESUME_INFO.link)}
                         >
-                            {ROUTES.ROUTES_RESUME.text}
+                            {RESUME_INFO.text}
                         </a>
                     </SideDrawerNavElement>
                     <SideDrawerNavElement>

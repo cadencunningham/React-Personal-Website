@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { ROUTES_CONTACT_ME, ROUTES_EXTRAS, ROUTES_HOME, ROUTES_RESUME } from '../../../shared/constants/routes';
+import { RESUME_INFO } from '../../../shared/constants/general';
+import { ROUTES_CONTACT_ME, ROUTES_EXTRAS, ROUTES_HOME } from '../../../shared/constants/routes';
+import { openLinkInNewTabHandler } from '../../../shared/utils/general';
 import Button from '../../shared/Button';
 
 const NAV_COLLAPSE_CLASS = 'nav__collapse';
@@ -93,11 +95,7 @@ const Navigation = (props: IProps) => {
                 <label className={[NAV_NAME_CLASS, 'heading-fancy'].join(' ')}>Caden Cunningham</label>
 
                 <div className="nav__button-container">
-                    <Button
-                        text={ROUTES_RESUME.text}
-                        selected={currentPath === ROUTES_RESUME.path}
-                        onClickHandler={() => handleNavChange(ROUTES_RESUME.path)}
-                    />
+                    <Button text={RESUME_INFO.text} onClickHandler={() => openLinkInNewTabHandler(RESUME_INFO.link)} />
                     <Button
                         text={ROUTES_CONTACT_ME.text}
                         selected={currentPath === ROUTES_CONTACT_ME.path}
