@@ -1,0 +1,69 @@
+
+.contact_me {
+    height: 90vh;
+
+    &__container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    &__container-half{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+        &--first{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title{
+        font-size: 6rem;
+        color: scssColorCreator(--color-tertiary-light)
+    }
+
+    &__cta-email{
+        display: flex;
+        border: 1px solid transparent;
+        padding: 5%;
+        border-radius: 10px;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        box-shadow: var(--shadow-white);
+        margin-top: 3rem;
+        color: scssColorCreator(--color-tertiary-light);
+        transition: all .2s;
+
+        &--icon_container{
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            background-color: scssColorCreator(--color-tertiary-light);
+            border-radius: 10px;
+            margin-right: 1rem;
+        }
+
+        &--icon{
+            height: 60%;
+            width: auto;
+            align-self: center;
+            color: scssColorCreator(--color-tertiary-dark);
+        }
+
+        &--email{
+            color: scssColorCreator(--color-primary-light);
+            cursor: pointer;
+        }
+    }
+
+    &__cta-email:hover{
+        border-color: scssColorCreator(--color-primary-light);
+    }
+
+
+}

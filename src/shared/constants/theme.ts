@@ -14,21 +14,26 @@ export const DEFAULT_COLOR_THEME_PICKERS_STATE = {
     [VAR_COLOR_PRIMARY_LIGHT]: {
         title: 'Primary Color - Light',
         rgb: DEFAULT_COLOR_PRIMARY_LIGHT,
+        headerClass:'color-picker__header--color-primary-light'
     },
     [VAR_COLOR_PRIMARY_DARK]: {
         title: 'Primary Color - Dark',
         rgb: DEFAULT_COLOR_PRIMARY_DARK,
+        headerClass:'color-picker__header--color-primary-dark'
     },
     [VAR_COLOR_SECONDARY]: {
         title: 'Secondary Color',
         rgb: DEFAULT_COLOR_SECONDARY,
+        headerClass:'color-picker__header--color-secondary'
     },
     [VAR_COLOR_TERTIARY_LIGHT]: {
         title: 'Tertiary Color - Light',
         rgb: DEFAULT_COLOR_TERTIARY_LIGHT,
+        headerClass:'color-picker__header--color-tertiary-light'
     },
     [VAR_COLOR_TERTIARY_DARK]: {
         title: 'Tertiary Color - Dark',
         rgb: DEFAULT_COLOR_TERTIARY_DARK,
+        headerClass:'color-picker__header--color-tertiary-dark'
     },
 };

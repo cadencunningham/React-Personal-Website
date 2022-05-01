@@ -7,7 +7,7 @@
     position: relative;
 
     display: grid;
-    grid-template-rows: minmax(min-content, 100vh) 1fr minmax(min-content, 4rem);
+    grid-template-rows: minmax(min-content, 90vh) 1fr minmax(min-content, 0rem);
     grid-auto-columns: 100%;
 
     &__page-title {

@@ -10,10 +10,25 @@
     &__header {
         font-size: 2rem;
         margin-bottom: 2rem;
-        color: scssColorCreator(--color-tertiary-light);
 
         @include mobile {
             font-size: 4rem;
+        }
+
+        &--color-tertiary-light {
+            color: scssColorCreator(--color-tertiary-light);
+        }
+        &--color-tertiary-dark {
+            color: scssColorCreator(--color-tertiary-dark);
+        }
+        &--color-primary-light {
+            color: scssColorCreator(--color-primary-light);
+        }
+        &--color-primary-dark {
+            color: scssColorCreator(--color-primary-dark);
+        }
+        &--color-secondary {
+            color: scssColorCreator(--color-secondary);
         }
     }
 

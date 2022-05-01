@@ -28,6 +28,7 @@ const ColorThemer = (props: IProps) => {
                         rgba={Object(colorThemeState)[colorStateKey].rgb}
                         header={Object(colorThemeState)[colorStateKey].title}
                         onChangeHandler={(color) => _onColorChangeHandler(color, colorStateKey)}
+                        headerClassName={Object(colorThemeState)[colorStateKey].headerClass}
                     />
                 ))}
             </div>
