@@ -1,11 +1,18 @@
 import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
+import { INIT_COMM_FORM_STATE } from '../../shared/constants/form';
+import { IFormState } from '../../shared/interfaces/component';
+import Form from '../shared/Form';
 
 const ContactMePage = () => {
+    const onFormSubmission = (formState:IFormState) => {
+        console.log(formState)
+    }
+
     return (
         <div className="contact_me">
             <div className='contact_me__container'>
-                <div className='contact_me__container-half contact_me__container-half--first'>
+                <div className='contact_me__container-half'>
                     <h1 className='contact_me__title'>Let's chat</h1>
                     <div className='contact_me__cta-email'>
                         <div className='contact_me__cta-email--icon_container'>
@@ -20,8 +27,12 @@ const ContactMePage = () => {
                         </div>
                     </div>
                 </div>
-                <div style={{width:'50%', height:'100%', backgroundColor:'blue', display:'flex', justifyContent:'center'}}>
-
+                <div className='contact_me__container-half'>
+                    <Form
+                        formTitle='Send me a message'
+                        initialFieldState={INIT_COMM_FORM_STATE}
+                        onSubmit={onFormSubmission}
+                    />
                 </div>
             </div>
         </div>

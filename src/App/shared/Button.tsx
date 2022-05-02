@@ -12,10 +12,11 @@ interface IProps {
     onClickHandler?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     disableRipple?: boolean;
     selected?: boolean;
+    type?: "button" | "submit" | "submit" | undefined;
 }
 
 const Button = (props: IProps) => {
-    const { text, disableRipple, onClickHandler, selected, btnClassName, btnColor } = props;
+    const { text, disableRipple, onClickHandler, selected, btnClassName, btnColor, type } = props;
 
     const addRipple = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         if (!disableRipple) {
@@ -49,6 +50,7 @@ const Button = (props: IProps) => {
     return (
         <button
             onMouseDown={addRipple}
+            type={type}
             className={[
                 'button',
                 'button_' + (btnColor || EButtonColor.PRIMARY),
