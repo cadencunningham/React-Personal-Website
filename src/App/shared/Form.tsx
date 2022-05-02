@@ -11,12 +11,22 @@ interface IProps {
 }
 
 const Form = (props:IProps) => {
-    const {formTitle, initialFieldState, formFieldClassName, formClassName} = props;
+    const {formTitle, initialFieldState, formFieldClassName, formClassName, onSubmit} = props;
     const [formState, setFormState] = useState(initialFieldState)
 
-    const onFieldChange = () => {
-        // setFormState({})
-        console.log(setFormState)
+    const onFieldChange = (key:string, value:string) => {
+        setFormState(prevState => ({
+            ...prevState,
+            [key]:{
+                ...prevState[key],
+                value:value
+            }
+        }))
+    }
+
+    const onSubmitHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        event.preventDefault();
+        onSubmit(formState)
     }
 
     return(
@@ -25,16 +35,17 @@ const Form = (props:IProps) => {
             {
                 Object.values(formState).map((field)=>(
                     <>
-                        {field.label && <label className='form_field-label'>{field.label}</label>}
                         { field.textArea ?
-                            <textarea 
-                                onChange={onFieldChange}
+                            <textarea
+                                key={field.key}
+                                onChange={(e)=>onFieldChange(field.key, e.currentTarget.value)}
                                 placeholder={field.placeholder}
                                 className={['form_field', formFieldClassName, field.className].join(' ')}
                             /> 
                             :
                             <input
-                                onChange={onFieldChange}
+                                key={field.key}
+                                onChange={(e)=>onFieldChange(field.key, e.currentTarget.value)}
                                 placeholder={field.placeholder}
                                 type={field.type||"text"}
                                 className={['form_field', formFieldClassName, field.className].join(' ')}
@@ -48,6 +59,7 @@ const Form = (props:IProps) => {
                 type='submit' 
                 btnColor={EButtonColor.SECONDARY}
                 btnClassName='form_submit-btn'
+                onClickHandler={onSubmitHandler}
             />
         </div>
     );

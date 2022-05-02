@@ -2,10 +2,20 @@
 .contact_me {
     height: 90vh;
 
+    @include tablet {
+        height: fit-content;
+        margin-bottom: 5rem;
+    }
+
     &__container{
         width: 100%;
         height: 100%;
         display: flex;
+
+        @include tablet {
+            margin-top: 10rem;
+            flex-direction: column; 
+        }
     }
 
     &__container-half{
@@ -15,6 +25,11 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+
+        @include tablet {
+            width: 100%;
+            height: fit-content;
+        }
     }
 
     &__title{
@@ -22,10 +37,19 @@
         color: scssColorCreator(--color-tertiary-light)
     }
 
-    &__cta-email{
+    &__form{
+        margin-top: 10vh;
+
+        @include tablet {
+            max-width: 450px;
+            margin-top: 0; 
+        }
+    }
+
+    &__cta{
         display: flex;
         border: 1px solid transparent;
-        padding: 5%;
+        padding: 2rem;
         border-radius: 10px;
         align-items: center;
         cursor: pointer;
@@ -33,7 +57,21 @@
         box-shadow: var(--shadow-white);
         margin-top: 3rem;
         color: scssColorCreator(--color-tertiary-light);
-        transition: all .2s;
+        transition: all .5s;
+
+        @include tablet {
+            height: fit-content;
+            margin-bottom: 5rem;
+            max-width: 450px;
+            width:80%;
+        }
+
+        &-secondary{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            color: rgb(var(--color-primary-light));
+        }
 
         &--icon_container{
             width: 5rem;
@@ -52,14 +90,29 @@
             color: scssColorCreator(--color-tertiary-dark);
         }
 
+        &--label{
+            font-size: 2rem;
+            @include tablet {
+                font-size: 3rem;
+            }
+        }
+
         &--email{
             color: scssColorCreator(--color-primary-light);
             cursor: pointer;
         }
     }
 
-    &__cta-email:hover{
+    &__cta:hover{
         border-color: scssColorCreator(--color-primary-light);
+    }
+
+    &__cta:active {
+        transform: translateY(3px);
+    }
+
+    &__cta-secondary:hover{
+        border-color: scssColorCreator(--color-tertiary-light);
     }
 
 
