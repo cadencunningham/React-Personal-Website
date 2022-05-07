@@ -4,9 +4,15 @@ import { INIT_COMM_FORM_STATE } from '../../shared/constants/form';
 import { IFormState } from '../../shared/interfaces/component';
 import Form from '../shared/Form';
 
+const CONTACT_EMAIL_ADDRESS = 'xcadencunningham@gmail.com'
+
 const ContactMePage = () => {
     const onFormSubmission = (formState:IFormState) => {
         console.log(formState)
+    }
+
+    const onEmailAppClick = () => {
+        window.open(`mailto:${CONTACT_EMAIL_ADDRESS}?subject=Lets chat`)
     }
 
     return (
@@ -14,7 +20,7 @@ const ContactMePage = () => {
             <div className='contact_me__container'>
                 <div className='contact_me__container-half'>
                     <h1 className='contact_me__title'>Let's chat</h1>
-                    <div className='contact_me__cta'>
+                    <div className='contact_me__cta' onClick={onEmailAppClick}>
                         <div className='contact_me__cta--icon_container'>
                             <AiOutlineMail className='contact_me__cta--icon'/>
                         </div>
@@ -22,7 +28,7 @@ const ContactMePage = () => {
                             <div className='contact_me__cta--label'>
                                 Contact me at
                                 <br/>
-                                <label className='contact_me__cta--email'>xcadencunningham@gmail.com</label>
+                                <label className='contact_me__cta--email'>{CONTACT_EMAIL_ADDRESS}</label>
                             </div>
                         </div>
                     </div>
