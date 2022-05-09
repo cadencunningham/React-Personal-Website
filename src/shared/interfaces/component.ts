@@ -6,15 +6,17 @@ export interface IListElement {
 }
 
 export interface IFormState {
-    [key: string]:IFormStateEntry
+    [key: string]:IFormStateEntry;
 }
 
 export interface IFormStateEntry {
+    required?:boolean;
     label?: string;
-    placeholder?: string;
+    placeholder: string;
     value?: string;
     key: string;
     type?: string;
     className?: string;
     textArea?: boolean;
+    valid?: boolean;
 }
