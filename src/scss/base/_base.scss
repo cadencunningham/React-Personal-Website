@@ -26,7 +26,10 @@ html {
     }
 }
 
-body, input, textarea, button {
+body,
+input,
+textarea,
+button {
     box-sizing: border-box;
 
     font-family: $font-secondary;
@@ -35,6 +38,6 @@ body, input, textarea, button {
     line-height: 1.6;
 }
 
-body{
+body {
     background-color: scssColorCreator(--color-secondary);
 }

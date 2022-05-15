@@ -12,8 +12,8 @@ interface IProps {
     onClickHandler?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     disableRipple?: boolean;
     selected?: boolean;
-    type?: "button" | "submit" | "submit" | undefined;
-    disabled?:boolean;
+    type?: 'button' | 'submit' | 'submit' | undefined;
+    disabled?: boolean;
 }
 
 const Button = (props: IProps) => {

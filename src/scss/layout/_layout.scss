@@ -1,7 +1,12 @@
-
 .layout {
-
-    background: linear-gradient(to top left, transparent, rgba(238, 238, 238, 0.082) 25%, transparent 50%, rgba(238, 238, 238, 0.082) 75%, transparent);
+    background: linear-gradient(
+        to top left,
+        transparent,
+        rgba(238, 238, 238, 0.082) 25%,
+        transparent 50%,
+        rgba(238, 238, 238, 0.082) 75%,
+        transparent
+    );
 
     width: 100vw;
     min-height: 100vh;
@@ -19,5 +24,4 @@
         margin-bottom: 4rem;
         max-width: 30rem;
     }
-
 }

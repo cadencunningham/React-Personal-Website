@@ -1,4 +1,3 @@
-
 .contact_me {
     height: 90vh;
 
@@ -7,18 +6,18 @@
         margin-bottom: 5rem;
     }
 
-    &__container{
+    &__container {
         width: 100%;
         height: 100%;
         display: flex;
 
         @include tablet {
             margin-top: 10rem;
-            flex-direction: column; 
+            flex-direction: column;
         }
     }
 
-    &__container-half{
+    &__container-half {
         width: 50%;
         height: 100%;
         display: flex;
@@ -32,21 +31,21 @@
         }
     }
 
-    &__title{
+    &__title {
         font-size: 6rem;
-        color: scssColorCreator(--color-tertiary-light)
+        color: scssColorCreator(--color-tertiary-light);
     }
 
-    &__form{
+    &__form {
         margin-top: 10vh;
 
         @include tablet {
             max-width: 450px;
-            margin-top: 0; 
+            margin-top: 0;
         }
     }
 
-    &__cta{
+    &__cta {
         display: flex;
         border: 1px solid transparent;
         padding: 2rem;
@@ -57,42 +56,42 @@
         box-shadow: var(--shadow-white);
         margin-top: 3rem;
         color: scssColorCreator(--color-tertiary-light);
-        transition: all .5s;
+        transition: all 0.5s;
 
         @include tablet {
             height: fit-content;
             margin-bottom: 5rem;
             max-width: 450px;
-            width:80%;
+            width: 80%;
         }
 
-        &-secondary{
+        &-secondary {
             width: 80%;
             display: flex;
             justify-content: center;
             color: rgb(var(--color-primary-light));
         }
 
-        &--label{
+        &--label {
             font-size: 2rem;
             @include tablet {
                 font-size: 3rem;
             }
         }
 
-        &--email{
+        &--email {
             color: scssColorCreator(--color-primary-light);
             cursor: pointer;
         }
     }
 
-    &__icon{
+    &__icon {
         height: 60%;
         width: auto;
         align-self: center;
         color: scssColorCreator(--color-tertiary-dark);
 
-        &_container{
+        &_container {
             width: 5rem;
             height: 5rem;
             display: flex;
@@ -101,14 +100,14 @@
             border-radius: 10px;
             margin-right: 1rem;
 
-            &--success{
+            &--success {
                 margin-left: 2rem;
                 background-color: $color-success;
             }
         }
     }
 
-    &__cta:hover{
+    &__cta:hover {
         border-color: scssColorCreator(--color-primary-light);
     }
 
@@ -116,22 +115,21 @@
         transform: translateY(3px);
     }
 
-    &__modal{
-        &--no_error{
+    &__modal {
+        &--no_error {
             display: flex;
             align-items: center;
             font-size: 2rem;
         }
 
-        &--error{
+        &--error {
             font-size: 2rem;
-            color:$color-error;
+            color: $color-error;
         }
 
-        &--btn-container{
+        &--btn-container {
             margin-top: 2rem;
-            display:flex;
+            display: flex;
         }
-        
     }
 }
