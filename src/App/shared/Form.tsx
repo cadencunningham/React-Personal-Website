@@ -100,6 +100,7 @@ const Form = (props:IProps) => {
                             onBlur={(e)=>onFieldChangeHandler(field.key, e.currentTarget.value)}
                             placeholder={field.placeholder+(field.required?'*':'')}
                             className={['form_field', formFieldClassName, field.className].join(' ')}
+                            defaultValue={field.value}
                         /> 
                         :
                         <input
@@ -108,6 +109,7 @@ const Form = (props:IProps) => {
                             placeholder={field.placeholder+(field.required?'*':'')}
                             type={field.type||"text"}
                             className={['form_field', formFieldClassName, field.className].join(' ')}
+                            defaultValue={field.value}
                         />
                 ))  
             }

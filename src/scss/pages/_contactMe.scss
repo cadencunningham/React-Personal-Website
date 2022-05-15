@@ -73,23 +73,6 @@
             color: rgb(var(--color-primary-light));
         }
 
-        &--icon_container{
-            width: 5rem;
-            height: 5rem;
-            display: flex;
-            justify-content: center;
-            background-color: scssColorCreator(--color-tertiary-light);
-            border-radius: 10px;
-            margin-right: 1rem;
-        }
-
-        &--icon{
-            height: 60%;
-            width: auto;
-            align-self: center;
-            color: scssColorCreator(--color-tertiary-dark);
-        }
-
         &--label{
             font-size: 2rem;
             @include tablet {
@@ -103,6 +86,28 @@
         }
     }
 
+    &__icon{
+        height: 60%;
+        width: auto;
+        align-self: center;
+        color: scssColorCreator(--color-tertiary-dark);
+
+        &_container{
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            background-color: scssColorCreator(--color-tertiary-light);
+            border-radius: 10px;
+            margin-right: 1rem;
+
+            &--success{
+                margin-left: 2rem;
+                background-color: $color-success;
+            }
+        }
+    }
+
     &__cta:hover{
         border-color: scssColorCreator(--color-primary-light);
     }
@@ -111,4 +116,22 @@
         transform: translateY(3px);
     }
 
+    &__modal{
+        &--no_error{
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        &--error{
+            font-size: 2rem;
+            color:$color-error;
+        }
+
+        &--btn-container{
+            margin-top: 2rem;
+            display:flex;
+        }
+        
+    }
 }
