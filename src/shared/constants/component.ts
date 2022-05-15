@@ -1,9 +1,9 @@
 import { IListElement } from '../interfaces/component';
 
-export const features: IListElement[] = [
+export const FEATURES: IListElement[] = [
     {
         label: 'Add technologies to home page',
-        active: true
+        active: true,
     },
     {
         label: 'Add profile to home page',

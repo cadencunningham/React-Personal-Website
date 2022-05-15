@@ -26,11 +26,18 @@ html {
     }
 }
 
-body {
+body,
+input,
+textarea,
+button {
     box-sizing: border-box;
 
     font-family: $font-secondary;
     color: scssColorCreator(--color-tertiary-dark);
     font-weight: 700;
     line-height: 1.6;
+}
+
+body {
+    background-color: scssColorCreator(--color-secondary);
 }

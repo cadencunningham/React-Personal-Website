@@ -32,6 +32,15 @@
     }
 }
 
+.button:disabled,
+button:disabled:hover,
+.button:disabled:active {
+    background-color: $color-white;
+    color: scssColorCreator(--color-tertiary-light);
+    cursor: not-allowed;
+    transform: translateY(0px);
+}
+
 .button_primary {
     background-color: transparent;
     color: scssColorCreator(--color-tertiary-light);

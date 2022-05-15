@@ -20,10 +20,14 @@
 @import './components/colorPicker';
 @import './components/card';
 @import './components/colorThemer';
+@import './components/form';
 @import './components/tableList';
 @import './components/youtube';
 @import './components/backdrop';
 @import './components/sideDrawer';
+@import './components/modal';
+@import './components/loadingSpinner.scss';
 
 @import './pages/home';
+@import './pages/contactMe';
 @import './pages/extras';
