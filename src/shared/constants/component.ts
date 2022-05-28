@@ -12,12 +12,6 @@ export const FEATURES: IListElement[] = [
         label: 'Add experience to home page',
     },
     {
-        label: 'Create contact me page and form',
-    },
-    {
-        label: 'Create contact me functionality',
-    },
-    {
         label: 'Create jira board',
     },
     {
@@ -96,6 +90,14 @@ export const FEATURES: IListElement[] = [
     },
     {
         label: 'Add ability to save color choices to LS',
+        completed: true,
+    },
+    {
+        label: 'Create contact me page and form',
+        completed: true,
+    },
+    {
+        label: 'Create contact me functionality',
         completed: true,
     },
 ];
